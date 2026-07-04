@@ -9,8 +9,8 @@ chemical options, and prevention — in Bangla or English.
 
 ## Live demo
 
-- **App (try it):** {{LIVE_URL}}
-- **Backend API + docs:** {{API_URL}}/docs
+- **App (try it):** https://4emonrahman2-leaflens.hf.space
+- **Backend API + docs:** https://4emonrahman2-leaflens-api.hf.space/docs
 
 > Heads up: the backend runs on a free Hugging Face Space that goes to sleep when idle.
 > The first request after a while can take up to a minute to wake up — the app shows a
