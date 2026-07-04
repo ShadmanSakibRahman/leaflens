@@ -1,0 +1,277 @@
+{
+  "Potato___Early_blight": {
+    "summary_en": "Early blight (Alternaria solani) — a fungal disease that shows up as brown target-like rings on older potato leaves.",
+    "symptoms": "Small dark brown spots with concentric rings ('target spots') on lower, older leaves; surrounding tissue yellows and leaves may drop.",
+    "organic": [
+      "Pick off and destroy infected lower leaves early.",
+      "Space plants and remove weeds so leaves dry quickly after rain.",
+      "Spray a neem-based or copper-based fungicide as a protectant.",
+      "Mulch the soil to stop spores splashing up from the ground."
+    ],
+    "chemical": [
+      "Apply a protectant fungicide such as mancozeb or chlorothalonil, following the product label rate and interval."
+    ],
+    "prevention": [
+      "Rotate potato with non-host crops for 2-3 years.",
+      "Use certified disease-free seed tubers and resistant varieties where available.",
+      "Avoid overhead irrigation; water at the base.",
+      "Keep plants well-fed with balanced nitrogen so they resist infection."
+    ],
+    "expert_note": "Fungicide names here are general classes — always follow the label rate and pre-harvest interval, and check with your local (upazila) agriculture officer."
+  },
+  "Potato___Late_blight": {
+    "summary_en": "Late blight (Phytophthora infestans) — a fast-moving disease that can destroy a potato field in days during cool, wet weather.",
+    "symptoms": "Water-soaked dark green to brown blotches on leaves and stems, often with a white fuzzy mould on the underside in humid weather; spreads very fast.",
+    "organic": [
+      "Remove and destroy infected plants immediately — do not compost them.",
+      "Improve drainage and airflow to keep foliage dry.",
+      "Spray copper-based fungicide protectively before symptoms worsen."
+    ],
+    "chemical": [
+      "Use a protectant fungicide (mancozeb or chlorothalonil) before infection; switch to a systemic blight fungicide if the disease is already active, per label."
+    ],
+    "prevention": [
+      "Plant certified seed and resistant varieties.",
+      "Destroy volunteer potatoes and nearby cull piles.",
+      "Avoid overhead watering; scout fields closely in cool, humid spells.",
+      "Hill soil over tubers so spores can't reach them."
+    ],
+    "expert_note": "Late blight moves fast — if several plants are affected, act the same day and consult your local agriculture officer about the right fungicide."
+  },
+  "Tomato___Bacterial_spot": {
+    "summary_en": "Bacterial spot (Xanthomonas) — a bacterial disease spread by splashing water and handling wet plants.",
+    "symptoms": "Small dark, water-soaked spots on leaves that turn brown with a yellow halo; scabby raised spots on fruit.",
+    "organic": [
+      "Remove and destroy infected leaves and debris.",
+      "Spray a copper-based product regularly as a protectant.",
+      "Avoid touching or harvesting plants while they are wet."
+    ],
+    "chemical": [
+      "Copper combined with mancozeb is the usual recommendation; follow the label — note bacteria are not cured by ordinary fungicides."
+    ],
+    "prevention": [
+      "Start with certified disease-free seed and transplants.",
+      "Rotate away from tomato and pepper for 2-3 years.",
+      "Use drip irrigation instead of overhead watering.",
+      "Disinfect stakes and tools between uses."
+    ],
+    "expert_note": "Copper slows bacterial spread but won't cure it — prevention and sanitation matter most. Check with your local agriculture officer."
+  },
+  "Tomato___Early_blight": {
+    "summary_en": "Early blight (Alternaria) on tomato — brown target-ring spots that start on the lowest leaves.",
+    "symptoms": "Dark brown spots with concentric rings on older leaves, yellowing around them, and progressive leaf drop from the bottom up.",
+    "organic": [
+      "Remove infected lower leaves and mulch the soil surface.",
+      "Stake plants and space them for good airflow.",
+      "Apply neem or copper fungicide as a protectant."
+    ],
+    "chemical": [
+      "Protectant fungicides such as chlorothalonil or mancozeb, applied per label at first symptoms."
+    ],
+    "prevention": [
+      "Rotate crops and remove crop residue after harvest.",
+      "Water at the base, keeping foliage dry.",
+      "Choose resistant varieties where available."
+    ],
+    "expert_note": "Follow the label rate and pre-harvest interval; consult your local agriculture officer for the right product."
+  },
+  "Tomato___Late_blight": {
+    "summary_en": "Late blight (Phytophthora infestans) on tomato — the same aggressive disease as potato late blight.",
+    "symptoms": "Large greasy grey-green to brown blotches on leaves and stems, sometimes with white mould underneath; fruit develops firm brown patches.",
+    "organic": [
+      "Pull and destroy infected plants right away.",
+      "Improve spacing and airflow; avoid wetting the leaves.",
+      "Spray copper fungicide protectively."
+    ],
+    "chemical": [
+      "Protectant mancozeb or chlorothalonil before infection; a systemic late-blight fungicide if already active, per label."
+    ],
+    "prevention": [
+      "Use resistant varieties and healthy transplants.",
+      "Avoid overhead irrigation and crowded planting.",
+      "Scout closely during cool, wet weather."
+    ],
+    "expert_note": "Act the same day you see it — late blight spreads fast. Consult your local agriculture officer."
+  },
+  "Tomato___Leaf_Mold": {
+    "summary_en": "Leaf mould (Passalora fulva) — a fungal disease that thrives in humid, poorly ventilated conditions.",
+    "symptoms": "Pale yellow patches on the upper leaf surface with an olive-green to grey velvety mould on the underside; leaves yellow and drop.",
+    "organic": [
+      "Increase ventilation and reduce humidity around plants.",
+      "Remove and destroy affected leaves.",
+      "Apply copper fungicide as a protectant."
+    ],
+    "chemical": [
+      "Chlorothalonil or mancozeb protectant sprays per label."
+    ],
+    "prevention": [
+      "Space and prune plants for airflow; avoid leaf wetness.",
+      "Use resistant varieties, especially under cover.",
+      "Water early in the day so leaves dry fast."
+    ],
+    "expert_note": "Managing humidity and airflow usually does more than spraying. Consult your local agriculture officer if it persists."
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "summary_en": "Septoria leaf spot (Septoria lycopersici) — a fungal disease that peppers the lower leaves with many small spots.",
+    "symptoms": "Numerous small circular spots with dark brown margins and grey centres on lower leaves; heavy spotting causes yellowing and defoliation.",
+    "organic": [
+      "Remove infected lower leaves and destroy crop debris.",
+      "Mulch to stop soil splash; keep foliage dry.",
+      "Apply copper fungicide protectively."
+    ],
+    "chemical": [
+      "Chlorothalonil or mancozeb, applied per label at first sign."
+    ],
+    "prevention": [
+      "Rotate crops and practise good field sanitation.",
+      "Avoid overhead irrigation.",
+      "Stake and space plants for airflow."
+    ],
+    "expert_note": "Sanitation and rotation are key. Follow the fungicide label and ask your local agriculture officer."
+  },
+  "Tomato___Yellow_Leaf_Curl_Virus": {
+    "summary_en": "Tomato Yellow Leaf Curl Virus (TYLCV) — a virus carried by whiteflies. There is no chemical cure for the virus itself, so you control the whitefly.",
+    "symptoms": "Upward curling and cupping of leaves, yellow leaf edges, stunted bushy growth, and heavy flower/fruit drop.",
+    "organic": [
+      "Remove and destroy infected plants to cut the source.",
+      "Use yellow sticky traps and neem oil to reduce whiteflies.",
+      "Lay reflective/silver mulch to repel whiteflies.",
+      "Protect young plants with fine insect netting."
+    ],
+    "chemical": [
+      "There is no spray that cures the virus — manage the whitefly vector with an approved insecticide, rotating modes of action, per label."
+    ],
+    "prevention": [
+      "Plant TYLCV-resistant varieties where available.",
+      "Control whiteflies early and remove infected plants promptly.",
+      "Keep the field and borders free of weed hosts."
+    ],
+    "expert_note": "Because it's a virus, focus on whitefly control and resistant varieties, not on 'curing' the plant. Consult your local agriculture officer."
+  },
+  "Corn___Common_rust": {
+    "summary_en": "Common rust (Puccinia sorghi) on maize — usually manageable and often does not need spraying.",
+    "symptoms": "Small cinnamon to reddish-brown powdery pustules scattered on both surfaces of the leaves; heavy infection yellows the leaves.",
+    "organic": [
+      "Plant resistant hybrids — the most effective step.",
+      "Remove heavily infected volunteer plants.",
+      "Ensure balanced nutrition so plants tolerate infection."
+    ],
+    "chemical": [
+      "A foliar fungicide (triazole or strobilurin class) is only worthwhile if infection is early and severe on a susceptible crop, per label."
+    ],
+    "prevention": [
+      "Choose resistant hybrids and plant on time.",
+      "Avoid very dense planting that traps humidity."
+    ],
+    "expert_note": "Common rust rarely justifies spraying on a healthy crop. Ask your local agriculture officer before applying fungicide."
+  },
+  "Corn___Northern_Leaf_Blight": {
+    "summary_en": "Northern leaf blight (Exserohilum turcicum) on maize — a fungal disease that can cut yield when it strikes early.",
+    "symptoms": "Long, cigar-shaped grey-green to tan lesions running along the leaf; lesions merge and dry out large areas of leaf.",
+    "organic": [
+      "Grow resistant hybrids.",
+      "Rotate crops and plough under old maize residue where the fungus survives.",
+      "Remove volunteer maize plants."
+    ],
+    "chemical": [
+      "A foliar fungicide applied at first lesions (around tasseling) protects yield on susceptible crops, per label."
+    ],
+    "prevention": [
+      "Use resistant hybrids and rotate away from maize.",
+      "Manage crop residue by tillage or removal."
+    ],
+    "expert_note": "Timing matters — early protection pays off, late spraying rarely does. Consult your local agriculture officer."
+  },
+  "Pepper___Bacterial_spot": {
+    "summary_en": "Bacterial spot (Xanthomonas) on pepper — a bacterial disease spread by water splash and handling.",
+    "symptoms": "Small dark, water-soaked spots on leaves that become brown and angular; leaves yellow and drop, and fruit gets scabby spots.",
+    "organic": [
+      "Remove and destroy infected leaves and debris.",
+      "Spray copper-based product as a protectant.",
+      "Don't work among plants when they are wet."
+    ],
+    "chemical": [
+      "Copper plus mancozeb is the usual protectant combination; bacteria are not cured by ordinary fungicides, so follow the label and rely on prevention."
+    ],
+    "prevention": [
+      "Use certified disease-free seed and transplants.",
+      "Rotate away from pepper and tomato for 2-3 years.",
+      "Switch to drip irrigation and disinfect tools."
+    ],
+    "expert_note": "Prevention and clean seed matter more than any spray. Consult your local agriculture officer."
+  },
+  "Rice___Bacterial_leaf_blight": {
+    "summary_en": "Bacterial leaf blight (Xanthomonas oryzae) — a serious bacterial disease of rice that spreads in warm, wet, flooded conditions.",
+    "symptoms": "Water-soaked yellow streaks along the leaf edges that spread and turn the leaf greyish-white and dry; young plants can wilt ('kresek').",
+    "organic": [
+      "Drain the field periodically to reduce spread where possible.",
+      "Remove and destroy severely infected plants and weed hosts on bunds.",
+      "Avoid excessive nitrogen, which makes plants more susceptible."
+    ],
+    "chemical": [
+      "There is no reliable chemical cure; copper-based sprays give limited protection. Focus on resistant varieties and nutrient management, per local advice."
+    ],
+    "prevention": [
+      "Grow resistant varieties suited to your area.",
+      "Use clean, certified seed and treat seed before sowing.",
+      "Apply balanced fertiliser and avoid over-application of nitrogen.",
+      "Keep bunds weed-free and manage water carefully."
+    ],
+    "expert_note": "Bacterial blight is managed mainly through resistant varieties and good nutrient/water management, not sprays. Consult your local agriculture officer."
+  },
+  "Rice___Blast": {
+    "summary_en": "Rice blast (Magnaporthe oryzae) — one of the most damaging rice diseases worldwide, affecting leaves, nodes and the neck of the panicle.",
+    "symptoms": "Diamond- or spindle-shaped spots with grey centres and brown margins on leaves; dark lesions on the neck below the panicle that can cause the grain head to break or stay empty.",
+    "organic": [
+      "Remove infected stubble and weed hosts after harvest.",
+      "Avoid heavy nitrogen and split the nitrogen dose instead of applying all at once.",
+      "Keep a steady water level; avoid drought stress that worsens blast."
+    ],
+    "chemical": [
+      "Preventive fungicides (tricyclazole or a strobilurin, per label) are used at the leaf stage and again before heading on susceptible varieties, following local recommendations."
+    ],
+    "prevention": [
+      "Grow blast-resistant varieties.",
+      "Use certified, treated seed.",
+      "Manage nitrogen carefully and maintain even water.",
+      "Do not plant too densely."
+    ],
+    "expert_note": "Neck blast around heading is the most damaging stage — time any preventive spray before heading and consult your local agriculture officer."
+  },
+  "Rice___Brown_spot": {
+    "summary_en": "Brown spot (Bipolaris oryzae) — a fungal disease often linked to poor or unbalanced soil nutrition.",
+    "symptoms": "Many small, oval brown spots scattered across the leaves (and on grains); heavy spotting on nutrient-poor soils reduces grain filling.",
+    "organic": [
+      "Correct the underlying soil nutrition, especially potassium and micronutrients.",
+      "Use well-decomposed organic matter to improve soil health.",
+      "Remove infected debris after harvest."
+    ],
+    "chemical": [
+      "Seed treatment and a protectant fungicide (e.g. mancozeb) can help on badly affected crops, per label and local advice."
+    ],
+    "prevention": [
+      "Test and correct soil fertility before planting.",
+      "Use certified, treated seed and resistant varieties.",
+      "Avoid water stress during the season."
+    ],
+    "expert_note": "Brown spot is often a 'hungry soil' disease — fixing nutrition usually helps more than spraying. Consult your local agriculture officer."
+  },
+  "Rice___Tungro": {
+    "summary_en": "Rice tungro — a virus disease spread by green leafhoppers; there is no cure for the virus, so you manage the insect and use resistant varieties.",
+    "symptoms": "Yellow to orange discolouration of leaves starting from the tip, stunted growth, and reduced tillering; patches of affected plants in the field.",
+    "organic": [
+      "Remove and destroy infected plants and volunteer/ratoon rice that host the virus.",
+      "Encourage natural enemies of leafhoppers and use light traps to monitor them.",
+      "Synchronise planting with neighbours and avoid staggered planting that keeps hoppers active."
+    ],
+    "chemical": [
+      "No spray cures the virus — manage the green leafhopper vector with an approved insecticide only when monitoring shows high numbers, per label."
+    ],
+    "prevention": [
+      "Grow tungro-resistant varieties where available.",
+      "Plant early and in synchrony with the community.",
+      "Control leafhoppers and remove infected plants promptly."
+    ],
+    "expert_note": "Because tungro is a virus, focus on resistant varieties and leafhopper control rather than curing the plant. Consult your local agriculture officer."
+  }
+}

@@ -1,0 +1,34 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+frontend/.vercel/
+npm-debug.log*
+
+# ML data & scratch (weights ARE committed; raw datasets are not)
+ml/data/
+ml/runs/
+*.zip
+*.tar.gz
+
+# Database (runtime-generated)
+backend/*.db
+backend/app/*.db
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# training logs
+ml/train_log.txt
