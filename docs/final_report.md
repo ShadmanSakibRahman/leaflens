@@ -1,166 +1,87 @@
-# Final Report — LeafLens
+# Final Report: LeafLens
 
-**An AI crop-disease diagnosis and advice system for Bangladeshi farmers**
+**An AI crop disease diagnosis and advice system for Bangladeshi farmers**
 
 **Author:** Md. Shadman Sakib Rahman
 **Course:** AI Capstone Project
 **Date:** July 2026
 
----
-
 ## 1. Introduction and the problem I chose
 
-I grew up around people for whom farming is not a hobby but the whole household income, so
-I wanted my capstone to solve something that actually matters to them rather than another
-generic demo. In Bangladesh agriculture supports close to 40% of the workforce, and a huge
-share of avoidable loss comes from crop disease that is caught late or treated with the
-wrong chemical.
+I grew up around people for whom farming is not a hobby but the whole household income, so I wanted my capstone to be something that actually helps them and not just another generic demo. In Bangladesh agriculture is close to 40% of the workforce, and a large share of avoidable loss comes from crop disease that is caught late or treated with the wrong chemical.
 
-The specific gap I set out to close is this: a farmer can *see* that a leaf looks wrong, but
-has no fast, trustworthy way to know *what* it is or *what to do* about it, in a language
-they read comfortably. The usual path — ask a shop, buy some pesticide, spray and hope — is
-expensive and often misses the real disease.
+The specific gap I wanted to close is this. A farmer can see that a leaf looks wrong, but has no fast and trustworthy way to know what it is or what to do about it, in a language they read comfortably. The usual path is to ask a shop, buy some pesticide, spray it and hope, which is expensive and often misses the real disease.
 
-**LeafLens** is my answer: photograph a leaf, get a diagnosis and a grounded treatment
-plan in Bangla in a couple of seconds.
+LeafLens is my answer to that. You photograph a leaf and get a diagnosis and a treatment plan in Bangla in a couple of seconds.
 
 ## 2. What I built (system overview)
 
-The system is deliberately built as three separable parts so each one can be understood and
-tested on its own:
+I built the system as three separate parts so each one can be understood and tested on its own.
 
-- **Frontend** — a mobile-first Next.js (React) web app. The farmer takes or uploads a
-  photo, sees the diagnosis and advice, can flip the whole interface between Bangla and
-  English, and can scroll a short history of past scans.
-- **Backend** — a FastAPI service that runs the AI and stores history. It exposes a small
-  REST API (`/predict`, `/advise`, `/diagnose`, `/history`, `/health`) and a SQLite
-  database.
-- **AI** — two models working together: a vision model that names the disease, and a
-  retrieval-plus-LLM layer that turns the diagnosis into safe, grounded advice.
+The frontend is a mobile first Next.js (React) web app. The farmer takes or uploads a photo, sees the diagnosis and advice, can switch the whole interface between Bangla and English, and can scroll through a short history of past scans.
 
-The live demo is deployed as an on-device app on GitHub Pages (see section 5 for why), and
-the full FastAPI backend also lives in the repo and runs the same models server-side.
+The backend is a FastAPI service that runs the AI and stores history. It has a small REST API (`/predict`, `/advise`, `/diagnose`, `/history`, `/health`) and a SQLite database.
 
-```
-Live demo (GitHub Pages)          Full server (backend/, runnable + Dockerised)
-  React UI + ONNX model    OR      React app --HTTPS--> FastAPI
-  runs in the browser              vision model + knowledge base + Groq + SQLite
-```
+The AI is two models working together: a vision model that names the disease, and a retrieval plus LLM layer that turns that diagnosis into safe advice.
+
+The live demo is deployed as an in browser app on GitHub Pages (section 5 explains why), and the full FastAPI backend also lives in the repo and runs the same models on the server side. In the live version the React app loads the model as ONNX and runs it in the browser. In the server version the React app talks to FastAPI over HTTP, and FastAPI runs the model, the knowledge base, Groq and SQLite.
 
 ## 3. The AI workflow in detail
 
-### 3.1 Vision model — naming the disease
+### 3.1 Vision model: naming the disease
 
-I used **transfer learning** on **MobileNetV2**, which is pretrained on ImageNet. I froze
-the convolutional backbone and trained only a new classifier head sized to my classes. I
-picked MobileNetV2 on purpose: it is small and fast enough to run on a free CPU server,
-which matters because the whole point is cheap, accessible deployment.
+I used transfer learning on MobileNetV2, which is already trained on ImageNet. I froze the convolutional part and trained only a new classifier head sized to my classes. I picked MobileNetV2 on purpose, because it is small and fast enough to run on a free CPU, and the whole point of the project is cheap and easy to reach.
 
-**Data.** I combined two public, no-login datasets from the Hugging Face Hub:
-`BrandonFors/Plant-Diseases-PlantVillage-Dataset` (for potato, tomato, maize and pepper) and
-`sharmin3/Rice-Leaf-Disease` (for rice). I mapped both into one clean set of canonical
-`Crop___Disease` classes so the model labels, the treatment knowledge base and the UI all
-line up. I capped images per class to keep the classes balanced and training quick, and
-split the data into train/validation/test in a stratified way so every class appears in
-every split.
+For the data I combined two public datasets from the Hugging Face Hub that need no login: `BrandonFors/Plant-Diseases-PlantVillage-Dataset` for potato, tomato, maize and pepper, and `sharmin3/Rice-Leaf-Disease` for rice. I mapped both of them into one clean set of `Crop___Disease` class names so that the model labels, the treatment knowledge base and the UI all match. I capped the number of images per class to keep things balanced and training fast, and split the data into train, validation and test in a stratified way so every class shows up in every split.
 
-**Training and results.** The model was trained for a modest number of epochs with Adam and
-cross-entropy loss, keeping the best validation checkpoint. On the held-out **test set** it
-reached:
+The model was trained for a modest number of epochs with Adam and cross entropy loss, keeping the best validation checkpoint. On the held out test set it reached:
 
-- **Test accuracy: 95.9%**
-- **Macro F1: 0.96** (weighted F1: 0.96)
-- Number of classes: **20** across 5 crops
+- Test accuracy: 95.9%
+- Macro F1: 0.96 (weighted F1 is also 0.96)
+- 20 classes across 5 crops
 
-Per-class precision/recall/F1 and a confusion matrix are saved with the model
-(`backend/model/metrics.json`, `confusion_matrix.png`). The easiest classes were rice
-tungro, rice healthy and potato healthy (F1 = 1.00). The hardest were the tomato
-blights — tomato early blight (F1 0.83), late blight (0.86) and septoria leaf spot
-(0.89) — which is expected, because those three genuinely look similar even to a human
-eye, and the confusion matrix shows they get mixed up with each other rather than with
-unrelated crops.
+The per class precision, recall and F1, plus a confusion matrix, are saved with the model in `backend/model/metrics.json` and `confusion_matrix.png`. The easiest classes were rice tungro, rice healthy and potato healthy, which all got an F1 of 1.00. The hardest were the tomato blights: tomato early blight (F1 0.83), late blight (0.86) and septoria leaf spot (0.89). That makes sense, because those three genuinely look similar even to a person, and the confusion matrix shows they get mixed up with each other rather than with unrelated crops.
 
-**Safety gate.** The model returns a softmax confidence. Below a threshold (0.55) the app
-does **not** name a disease — it tells the farmer to retake a clearer photo or consult an
-officer. I added this because in this domain a confident wrong answer (spray the wrong
-chemical) is more harmful than an honest "I'm not sure".
+The model also returns a softmax confidence. Below a threshold of 0.55 the app does not name a disease at all, and instead tells the farmer to retake a clearer photo or ask an officer. I added this because in this kind of app a confident wrong answer, meaning spraying the wrong chemical, is worse than an honest "I am not sure".
 
-### 3.2 Advisory layer — turning a label into safe advice
+### 3.2 Advisory layer: turning a label into safe advice
 
-This is the part I most wanted to get right, because it is where language models usually go
-wrong: they happily invent plausible-sounding but fake treatments. My rule was that the app
-must never fabricate agricultural advice.
+This is the part I most wanted to get right, because this is where language models usually go wrong. They will happily invent treatments that sound correct but are made up. My rule was that the app must never make up farming advice.
 
-So the treatment facts live in a **curated knowledge base** (`knowledge_base.json`): one
-entry per disease with symptoms, organic/cultural control, chemical control, prevention, and
-a "when to call an expert" note. When the vision model returns a disease, the backend
-**retrieves** that entry. The **Groq LLM (llama-3.3-70b)** is then given *only* those facts
-and asked to translate them into simple Bangla and write a two-sentence summary. It is
-explicitly instructed not to add anything not in the facts.
+So the treatment facts live in a knowledge file that I wrote myself (`knowledge_base.json`). Each disease has one entry with symptoms, organic control, chemical control, prevention, and a note about when to call an expert. When the vision model returns a disease, the backend looks up that entry. Then the Groq LLM (llama-3.3-70b) is given only those facts and asked to translate them into simple Bangla and write a two sentence summary. It is clearly told not to add anything that is not already in the facts.
 
-If Groq is unreachable, the backend simply returns the verified English facts. The feature
-degrades; it never fabricates.
+If Groq cannot be reached, the backend just returns the checked English facts. The feature gets simpler, but it never makes anything up.
 
 ## 4. Design decisions and trade-offs
 
-- **Decoupled frontend/backend instead of one Streamlit app.** More work (two deploys,
-  CORS), but it gives a real API and database, which is both better engineering and a more
-  honest "backend". It also means the model server and the UI can scale or change
-  independently.
-- **MobileNetV2, frozen backbone.** I traded a little accuracy for a model that trains in
-  minutes on a CPU and serves fast on free hosting. For this use case, deployability beats a
-  fractional accuracy gain.
-- **Knowledge base + LLM instead of a pure LLM.** Slightly less "magical", but grounded and
-  safe. In agriculture, wrong advice has a real cost, so I chose trust over fluency.
-- **Confidence gate.** I accept that the app will sometimes say "not sure" on a blurry photo.
-  That is the correct behaviour, not a bug.
+I kept the frontend and backend separate instead of putting everything in one Streamlit app. It was more work (two things to run, plus CORS), but it gives a real API and a real database, which is both better engineering and a more honest backend. It also means the model server and the UI can be changed on their own.
+
+I used a frozen MobileNetV2 backbone. I gave up a little accuracy in exchange for a model that trains in minutes on a CPU and runs fast on free hosting. For this project, being easy to deploy was worth more than a small accuracy gain.
+
+I used a knowledge file plus an LLM instead of a pure LLM. It is a bit less impressive to look at, but it is safe. In agriculture a wrong answer has a real cost, so I chose trust over sounding clever.
+
+I kept the confidence gate even though it means the app sometimes says "not sure" on a blurry photo. That is the correct behaviour, not a bug.
 
 ## 5. What was annoying to get right
 
-A few things I figured out the hard way:
+A few things I only figured out the hard way.
 
-- **Python version.** The machine had only Python 3.14, and PyTorch does not ship wheels for
-  it yet, so `pip install torch` failed. I installed Python 3.12 specifically for the ML
-  stack.
-- **Label alignment.** The two datasets name their classes differently
-  (`Corn_(maize)___Common_rust_` vs a clean `Corn___Common_rust`). If the model labels and
-  the knowledge-base keys don't match exactly, the advice lookup silently fails. I solved it
-  by mapping every source label into my own canonical names when preparing the data, so
-  everything is aligned by construction.
-- **The host was blocked in Bangladesh.** I first deployed to Hugging Face Spaces, and it
-  ran fine — but `*.hf.space` turned out to be blocked on my ISP (every Space, even famous
-  ones, returned the same error, while the Hugging Face API still worked). Since my grader is
-  likely on a Bangladeshi network too, a blocked demo would be useless. So I pivoted: I
-  exported the model to **ONNX**, pre-translated all the advice to Bangla at build time, and
-  rebuilt the app to run **entirely in the browser** on **GitHub Pages** (which is reachable
-  from Bangladesh). The constraint actually made the product better — it now works with no
-  server and no per-request cost. The full FastAPI backend still lives in the repo.
-- **Keeping the LLM grounded.** My first prompt let the model "improve" the advice and it
-  started adding dosages that weren't in my facts. Tightening the instruction to *translate
-  only* fixed it.
+The Python version. The machine only had Python 3.14, and PyTorch does not have a build for it yet, so `pip install torch` just failed. I installed Python 3.12 for the ML side to fix it.
+
+Label alignment. The two datasets name their classes differently (one had `Corn_(maize)___Common_rust_`, and I wanted a clean `Corn___Common_rust`). If the model labels and the knowledge file keys do not match exactly, the advice lookup quietly returns nothing. I fixed it by renaming every source label into my own naming when I prepare the data, so everything lines up.
+
+The host was blocked in Bangladesh. I first deployed the backend to Hugging Face Spaces and it ran fine, but then I realised `*.hf.space` is blocked on my internet here (every Space, even famous ones, gave me the same error, while the Hugging Face API still worked). Since my grader is probably on a Bangladeshi network too, a blocked demo would be useless. So I changed the plan. I exported the model to ONNX, pre translated all the advice into Bangla at build time, and rebuilt the app so it runs completely in the browser on GitHub Pages, which does load here. In the end the limitation made the product better, because now it needs no server and costs nothing per request. The full FastAPI backend is still in the repo.
+
+Keeping the LLM honest. My first prompt let the model "improve" the advice and it started adding pesticide dosages that were not in my facts. I had to make the instruction stricter (basically translate only, add nothing) before it stopped.
 
 ## 6. Results and conclusion
 
-LeafLens works end to end: a leaf photo becomes a diagnosis with a confidence score and
-a grounded Bangla treatment plan, and the whole thing runs on free hosting behind a single
-URL. The vision model reaches 95.9% test accuracy across 20 classes, and
-the advisory layer stays factual because the facts come from a curated knowledge base rather
-than the model's imagination.
+LeafLens works from end to end. A leaf photo becomes a diagnosis with a confidence score and a Bangla treatment plan, and the live version runs on free hosting on one link. The vision model gets 95.9% test accuracy across 20 classes, and the advice stays factual because the facts come from a knowledge file I wrote rather than from the model's imagination.
 
-**Honest limitations.** The training images are cleaner than a real muddy field photo, so
-real-world accuracy will be lower than the test number — the confidence gate is there partly
-to catch that. The knowledge base covers common diseases of five crops, not everything. And
-the advice is a first opinion, not a replacement for an agriculture officer, which the app
-says openly.
+Honest limitations. The training images are cleaner than a real muddy field photo, so real accuracy in a field will be lower than the test number. That is partly why the "not sure" behaviour is there. The knowledge file only covers common diseases of five crops, not everything. And the advice is a first opinion, not a replacement for a real agriculture officer, which the app also says.
 
-**Future work.** Collect real in-field photos from Bangladesh to fine-tune on, add more
-crops and pests, support voice input for low-literacy users, and add an offline mode so it
-works without a signal in the field.
+Future work. Collect real in field photos from Bangladesh to fine tune on, add more crops and pests, add voice input for people who do not read much, and add an offline mode so it works without a signal in the field.
 
-Building this taught me that the hardest part of an AI product is not the model accuracy —
-it is making the whole thing trustworthy, honest about uncertainty, and actually reachable
-by the person who needs it.
+Building this taught me that the hardest part of an AI product is not really the model accuracy. It is making the whole thing trustworthy, honest about what it does not know, and actually reachable by the person who needs it.
 
----
-
-*Md. Shadman Sakib Rahman*
+Md. Shadman Sakib Rahman
