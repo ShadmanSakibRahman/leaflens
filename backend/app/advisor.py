@@ -87,6 +87,7 @@ def _fallback_from_kb(entry, crop, disease):
         "summary_en": entry.get("summary_en", f"{disease} detected on {crop.lower()}."),
         "summary_bn": "",
         "symptoms_en": entry.get("symptoms", ""),
+        "symptoms_bn": "",
         "organic_en": entry.get("organic", []),
         "chemical_en": entry.get("chemical", []),
         "prevention_en": entry.get("prevention", []),
@@ -131,8 +132,9 @@ def _groq_translate(entry, crop, disease):
         "lists and notes into simple, respectful Bangla a rural farmer can follow, and "
         "(2) write a two-sentence plain-language summary in both English and Bangla. "
         "Return ONLY a JSON object with these exact keys: summary_en, summary_bn, "
-        "organic_bn (array), chemical_bn (array), prevention_bn (array), expert_note_bn. "
-        "Each Bangla array item must correspond to the same-index English item you were given."
+        "symptoms_bn, organic_bn (array), chemical_bn (array), prevention_bn (array), "
+        "expert_note_bn. Each Bangla array item must correspond to the same-index English "
+        "item you were given."
     )
     user = json.dumps(facts, ensure_ascii=False)
 
@@ -182,6 +184,7 @@ def advise(raw_label, crop, disease, is_healthy=False, uncertain=False):
                 "source": "groq",
                 "summary_en": bn.get("summary_en") or base["summary_en"],
                 "summary_bn": bn.get("summary_bn", ""),
+                "symptoms_bn": bn.get("symptoms_bn", ""),
                 "organic_bn": bn.get("organic_bn", []),
                 "chemical_bn": bn.get("chemical_bn", []),
                 "prevention_bn": bn.get("prevention_bn", []),

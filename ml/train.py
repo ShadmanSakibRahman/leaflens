@@ -1,15 +1,17 @@
-"""Train the Fasal Doctor leaf-disease classifier.
+"""Train the LeafLens leaf-disease classifier.
 
-Transfer learning on MobileNetV2 (ImageNet-pretrained). Reads a standard
-ImageFolder at ml/data/ (one subfolder per class), splits train/val/test, trains
-the classifier head, evaluates, and writes weights + labels + metrics into
+Transfer learning on MobileNetV2 (ImageNet-pretrained). Because we freeze the
+backbone and only train the classifier head, we extract the backbone's pooled
+features ONCE (a single pass over the images) and then train a linear head on those
+cached features for many epochs in seconds. This is a standard "linear probe" and is
+far faster on CPU than recomputing the frozen features every epoch.
+
+Reads a standard ImageFolder at ml/data/, splits train/val/test in a stratified way,
+trains, evaluates, and writes weights + labels + metrics + a confusion matrix into
 backend/model/ so the API can serve them directly.
 
-CPU-friendly by design: the backbone is frozen (only the head trains) and images
-per class are capped, so this finishes in minutes without a GPU.
-
 Usage:
-    python ml/train.py --epochs 8 --per-class-cap 400
+    python ml/train.py --epochs 40 --per-class-cap 500
 """
 
 import argparse
@@ -20,6 +22,7 @@ import random
 import numpy as np
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 from torch.utils.data import DataLoader, Subset
 from torchvision import datasets, models, transforms
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
@@ -43,18 +46,9 @@ def set_seed(seed):
     torch.manual_seed(seed)
 
 
-def build_transforms():
-    train_tf = transforms.Compose(
-        [
-            transforms.RandomResizedCrop(IMG_SIZE, scale=(0.7, 1.0)),
-            transforms.RandomHorizontalFlip(),
-            transforms.RandomRotation(20),
-            transforms.ColorJitter(0.2, 0.2, 0.2),
-            transforms.ToTensor(),
-            transforms.Normalize(MEAN, STD),
-        ]
-    )
-    eval_tf = transforms.Compose(
+def eval_transform():
+    # Same preprocessing the backend uses at inference, so features match.
+    return transforms.Compose(
         [
             transforms.Resize(256),
             transforms.CenterCrop(IMG_SIZE),
@@ -62,11 +56,9 @@ def build_transforms():
             transforms.Normalize(MEAN, STD),
         ]
     )
-    return train_tf, eval_tf
 
 
 def capped_indices(targets, cap, seed):
-    """Return a subset of indices with at most `cap` samples per class."""
     if cap is None or cap <= 0:
         return list(range(len(targets)))
     rng = random.Random(seed)
@@ -82,7 +74,6 @@ def capped_indices(targets, cap, seed):
 
 
 def split_indices(indices, targets, seed, val_frac=0.15, test_frac=0.15):
-    """Stratified split so every class appears in every split."""
     rng = random.Random(seed)
     by_class = {}
     for i in indices:
@@ -100,102 +91,111 @@ def split_indices(indices, targets, seed, val_frac=0.15, test_frac=0.15):
     return train, val, test
 
 
+def extract_features(backbone, dataset, indices, device, batch_size=64):
+    """One forward pass through the frozen backbone -> pooled 1280-d features."""
+    loader = DataLoader(Subset(dataset, indices), batch_size=batch_size, shuffle=False)
+    feats, labels = [], []
+    backbone.eval()
+    done = 0
+    with torch.no_grad():
+        for x, y in loader:
+            x = x.to(device)
+            f = backbone.features(x)
+            f = F.adaptive_avg_pool2d(f, 1).flatten(1)
+            feats.append(f.cpu())
+            labels.append(y)
+            done += x.size(0)
+            print(f"    extracted {done}/{len(indices)}", end="\r")
+    print()
+    return torch.cat(feats), torch.cat(labels)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data-dir", default=DEFAULT_DATA)
     ap.add_argument("--out-dir", default=DEFAULT_OUT)
-    ap.add_argument("--epochs", type=int, default=8)
-    ap.add_argument("--batch-size", type=int, default=32)
+    ap.add_argument("--epochs", type=int, default=40)
     ap.add_argument("--lr", type=float, default=1e-3)
-    ap.add_argument("--per-class-cap", type=int, default=400)
+    ap.add_argument("--per-class-cap", type=int, default=500)
     ap.add_argument("--seed", type=int, default=42)
     args = ap.parse_args()
 
     set_seed(args.seed)
     os.makedirs(args.out_dir, exist_ok=True)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    train_tf, eval_tf = build_transforms()
-    # Two views of the same folder so train gets augmentation, val/test don't.
-    full_train = datasets.ImageFolder(args.data_dir, transform=train_tf)
-    full_eval = datasets.ImageFolder(args.data_dir, transform=eval_tf)
-    classes = full_train.classes
-    targets = full_train.targets
+    ds = datasets.ImageFolder(args.data_dir, transform=eval_transform())
+    classes = ds.classes
+    targets = ds.targets
     print(f"Found {len(classes)} classes, {len(targets)} images total.")
 
     kept = capped_indices(targets, args.per_class_cap, args.seed)
     tr_idx, va_idx, te_idx = split_indices(kept, targets, args.seed)
     print(f"Split -> train {len(tr_idx)}, val {len(va_idx)}, test {len(te_idx)}")
 
-    train_ds = Subset(full_train, tr_idx)
-    val_ds = Subset(full_eval, va_idx)
-    test_ds = Subset(full_eval, te_idx)
-
-    train_ld = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True, num_workers=0)
-    val_ld = DataLoader(val_ds, batch_size=args.batch_size, shuffle=False, num_workers=0)
-    test_ld = DataLoader(test_ds, batch_size=args.batch_size, shuffle=False, num_workers=0)
-
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"Training on {device}")
-
+    # Build the network once; use its frozen backbone for feature extraction and
+    # later attach the trained head for saving.
     net = models.mobilenet_v2(weights=models.MobileNet_V2_Weights.IMAGENET1K_V1)
-    for p in net.features.parameters():
-        p.requires_grad = False  # freeze backbone -> fast on CPU
-    net.classifier[1] = nn.Linear(net.last_channel, len(classes))
     net = net.to(device)
 
+    print("Extracting features (one pass through the frozen backbone)...")
+    print("  train:")
+    Xtr, ytr = extract_features(net, ds, tr_idx, device)
+    print("  val:")
+    Xva, yva = extract_features(net, ds, va_idx, device)
+    print("  test:")
+    Xte, yte = extract_features(net, ds, te_idx, device)
+
+    # Train a linear head on cached features (fast).
+    head = nn.Linear(net.last_channel, len(classes)).to(device)
     criterion = nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(
-        filter(lambda p: p.requires_grad, net.parameters()), lr=args.lr
-    )
+    optimizer = torch.optim.Adam(head.parameters(), lr=args.lr, weight_decay=1e-4)
+
+    Xtr, ytr = Xtr.to(device), ytr.to(device)
+    Xva, yva = Xva.to(device), yva.to(device)
 
     best_val = 0.0
     best_state = None
+    n = Xtr.size(0)
+    bs = 256
     for epoch in range(1, args.epochs + 1):
-        net.train()
-        running = 0.0
-        for x, y in train_ld:
-            x, y = x.to(device), y.to(device)
+        head.train()
+        perm = torch.randperm(n)
+        for i in range(0, n, bs):
+            idx = perm[i : i + bs]
             optimizer.zero_grad()
-            loss = criterion(net(x), y)
+            loss = criterion(head(Xtr[idx]), ytr[idx])
             loss.backward()
             optimizer.step()
-            running += loss.item() * x.size(0)
-        train_loss = running / max(1, len(tr_idx))
 
-        net.eval()
-        correct = total = 0
+        head.eval()
         with torch.no_grad():
-            for x, y in val_ld:
-                x, y = x.to(device), y.to(device)
-                pred = net(x).argmax(1)
-                correct += (pred == y).sum().item()
-                total += y.size(0)
-        val_acc = correct / max(1, total)
-        print(f"Epoch {epoch}/{args.epochs}  loss={train_loss:.4f}  val_acc={val_acc:.4f}")
+            val_acc = (head(Xva).argmax(1) == yva).float().mean().item()
+        if epoch % 5 == 0 or epoch == 1:
+            print(f"Epoch {epoch}/{args.epochs}  val_acc={val_acc:.4f}")
         if val_acc >= best_val:
             best_val = val_acc
-            best_state = {k: v.cpu().clone() for k, v in net.state_dict().items()}
+            best_state = {k: v.detach().cpu().clone() for k, v in head.state_dict().items()}
 
-    if best_state is not None:
-        net.load_state_dict(best_state)
+    head.load_state_dict(best_state)
 
-    # Final test evaluation
-    net.eval()
-    y_true, y_pred = [], []
+    # Test evaluation
+    head.eval()
     with torch.no_grad():
-        for x, y in test_ld:
-            x = x.to(device)
-            preds = net(x).argmax(1).cpu().numpy()
-            y_pred.extend(preds.tolist())
-            y_true.extend(y.numpy().tolist())
-
+        y_pred = head(Xte.to(device)).argmax(1).cpu().numpy().tolist()
+    y_true = yte.numpy().tolist()
     test_acc = accuracy_score(y_true, y_pred)
     report = classification_report(
         y_true, y_pred, target_names=classes, output_dict=True, zero_division=0
     )
-    print(f"\nTest accuracy: {test_acc:.4f}")
+    print(f"\nBest val accuracy: {best_val:.4f}")
+    print(f"Test accuracy:     {test_acc:.4f}")
 
-    # Save artifacts the backend needs
+    # Attach trained head to the full network and save the full state_dict, so the
+    # backend can load mobilenet_v2 + this head exactly as it does at inference.
+    net.classifier[1] = nn.Linear(net.last_channel, len(classes))
+    net.classifier[1].load_state_dict(head.state_dict())
+    net.eval()
     torch.save(net.state_dict(), os.path.join(args.out_dir, "weights.pt"))
     with open(os.path.join(args.out_dir, "labels.json"), "w", encoding="utf-8") as f:
         json.dump(classes, f, ensure_ascii=False, indent=2)
@@ -209,7 +209,7 @@ def main():
         "val_size": len(va_idx),
         "test_size": len(te_idx),
         "epochs": args.epochs,
-        "backbone": "mobilenet_v2 (ImageNet, frozen features)",
+        "backbone": "mobilenet_v2 (ImageNet, frozen) + linear head (linear probe)",
         "per_class": {
             c: {
                 "precision": round(report[c]["precision"], 4),
@@ -225,9 +225,8 @@ def main():
     with open(os.path.join(args.out_dir, "metrics.json"), "w", encoding="utf-8") as f:
         json.dump(metrics, f, ensure_ascii=False, indent=2)
 
-    # Confusion matrix figure for the report/README
     cm = confusion_matrix(y_true, y_pred)
-    fig, ax = plt.subplots(figsize=(max(6, len(classes) * 0.6), max(5, len(classes) * 0.6)))
+    fig, ax = plt.subplots(figsize=(max(7, len(classes) * 0.55), max(6, len(classes) * 0.55)))
     im = ax.imshow(cm, cmap="Blues")
     ax.set_xticks(range(len(classes)))
     ax.set_yticks(range(len(classes)))

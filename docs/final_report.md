@@ -68,12 +68,17 @@ every split.
 cross-entropy loss, keeping the best validation checkpoint. On the held-out **test set** it
 reached:
 
-- **Test accuracy: {{TEST_ACC}}**
-- **Macro F1: {{MACRO_F1}}**
-- Number of classes: **{{NUM_CLASSES}}** across 5 crops
+- **Test accuracy: 95.9%**
+- **Macro F1: 0.96** (weighted F1: 0.96)
+- Number of classes: **20** across 5 crops
 
 Per-class precision/recall/F1 and a confusion matrix are saved with the model
-(`backend/model/metrics.json`, `confusion_matrix.png`). {{METRIC_COMMENT}}
+(`backend/model/metrics.json`, `confusion_matrix.png`). The easiest classes were rice
+tungro, rice healthy and potato healthy (F1 = 1.00). The hardest were the tomato
+blights — tomato early blight (F1 0.83), late blight (0.86) and septoria leaf spot
+(0.89) — which is expected, because those three genuinely look similar even to a human
+eye, and the confusion matrix shows they get mixed up with each other rather than with
+unrelated crops.
 
 **Safety gate.** The model returns a softmax confidence. Below a threshold (0.55) the app
 does **not** name a disease — it tells the farmer to retake a clearer photo or consult an
@@ -133,7 +138,7 @@ A few things I figured out the hard way:
 
 LeafLens works end to end: a leaf photo becomes a diagnosis with a confidence score and
 a grounded Bangla treatment plan, and the whole thing runs on free hosting behind a single
-URL. The vision model reaches {{TEST_ACC}} test accuracy across {{NUM_CLASSES}} classes, and
+URL. The vision model reaches 95.9% test accuracy across 20 classes, and
 the advisory layer stays factual because the facts come from a curated knowledge base rather
 than the model's imagination.
 

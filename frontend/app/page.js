@@ -269,6 +269,7 @@ function ResultCard({ data, t, lang }) {
   }
 
   const summary = isBn ? a.summary_bn || a.summary_en : a.summary_en;
+  const symptoms = isBn ? a.symptoms_bn || a.symptoms_en : a.symptoms_en;
   const organic = isBn && a.organic_bn?.length ? a.organic_bn : a.organic_en;
   const chemical = isBn && a.chemical_bn?.length ? a.chemical_bn : a.chemical_en;
   const prevention =
@@ -307,10 +308,10 @@ function ResultCard({ data, t, lang }) {
       <div className="advice">
         {summary && <p className="summary" style={{ marginTop: 14 }}>{summary}</p>}
 
-        {a.symptoms_en && !p.uncertain && (
+        {symptoms && !p.uncertain && (
           <>
             <h3>🔍 {t.symptoms}</h3>
-            <p style={{ fontSize: 14, margin: 0 }}>{a.symptoms_en}</p>
+            <p style={{ fontSize: 14, margin: 0 }}>{symptoms}</p>
           </>
         )}
 

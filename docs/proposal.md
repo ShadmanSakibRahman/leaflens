@@ -42,7 +42,7 @@ The system uses **two AI components that work together**:
 - **Vision model (diagnosis):** transfer learning on **MobileNetV2** (pretrained on
   ImageNet, with a fine-tuned classifier head). It is trained on real leaf-photo datasets
   covering major Bangladeshi crops — rice, potato, tomato, maize and pepper — across roughly
-  twenty disease/healthy classes. On a held-out test set it reaches about **{{TEST_ACC}}**
+  twenty disease/healthy classes. On a held-out test set it reaches about **95.9%**
   accuracy. Output is a class label plus a softmax confidence used by the safety gate.
 
 - **Advisory model (grounded generation):** a retrieval step pulls the treatment sheet for

@@ -1,4 +1,4 @@
-"""Fasal Doctor API.
+"""LeafLens API.
 
 Endpoints
   GET  /health    liveness + whether the model is loaded (frontend uses this to
@@ -69,7 +69,7 @@ async def _read_valid_image(file: UploadFile) -> bytes:
 
 @app.get("/")
 def root():
-    return {"service": "Fasal Doctor API", "docs": "/docs", "health": "/health"}
+    return {"service": "LeafLens API", "docs": "/docs", "health": "/health"}
 
 
 @app.get("/health")

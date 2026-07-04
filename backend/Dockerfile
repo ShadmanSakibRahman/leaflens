@@ -1,4 +1,4 @@
-# Fasal Doctor backend — container for Hugging Face Spaces (SDK: docker).
+# LeafLens backend — container for Hugging Face Spaces (SDK: docker).
 # HF Spaces serves on port 7860 and mounts a read-only filesystem except /tmp,
 # so the SQLite DB is written under /tmp.
 
