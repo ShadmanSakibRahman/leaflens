@@ -1,0 +1,19 @@
+# Render Blueprint for LeafLens (single service: FastAPI serves the API + the
+# built React frontend). Free plan, Singapore region (closest to Bangladesh).
+# GROQ_API_KEY is set as a secret in the Render dashboard (sync: false).
+services:
+  - type: web
+    name: leaflens
+    runtime: docker
+    repo: https://github.com/ShadmanSakibRahman/leaflens
+    branch: main
+    region: singapore
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    autoDeploy: true
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile

@@ -2,8 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000";
+// Empty string => same-origin (single-service deploy). Local dev sets this to
+// http://localhost:8000 via .env.local.
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "";
 
 // All UI strings in both languages so the toggle flips everything.
 const T = {

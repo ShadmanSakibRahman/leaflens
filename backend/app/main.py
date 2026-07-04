@@ -67,8 +67,8 @@ async def _read_valid_image(file: UploadFile) -> bytes:
     return data
 
 
-@app.get("/")
-def root():
+@app.get("/api")
+def api_info():
     return {"service": "LeafLens API", "docs": "/docs", "health": "/health"}
 
 
@@ -159,3 +159,15 @@ async def diagnose(file: UploadFile = File(...)):
 def history(limit: int = 20):
     limit = max(1, min(limit, 100))
     return {"scans": db.recent_scans(limit)}
+
+
+# Single-service deployment: serve the built frontend (frontend/out copied to
+# backend/static). Mounted LAST so the API routes above take precedence; the
+# static handler serves "/", index.html, and the _next/ assets. If the folder
+# isn't present (e.g. local API-only dev), this is simply skipped.
+_STATIC_DIR = os.path.join(os.path.dirname(__file__), "..", "static")
+if os.path.isdir(_STATIC_DIR):
+    from fastapi.staticfiles import StaticFiles
+
+    app.mount("/", StaticFiles(directory=_STATIC_DIR, html=True), name="frontend")
+    log.info("Serving frontend from %s", _STATIC_DIR)
