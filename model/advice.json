@@ -1,0 +1,744 @@
+{
+  "Corn___Common_rust": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Common rust",
+    "crop": "Corn",
+    "summary_en": "Common rust of corn is a disease that causes small powdery pustules on leaves and can lead to yellowing, but it rarely requires fungicide treatment. Farmers can manage the disease by choosing resistant hybrids, removing infected plants, and ensuring balanced nutrition.",
+    "summary_bn": "ভুট্টার সাধারণ বরণ একটি রোগ যা পাতায় ছোট গুঁড়া পিণ্ড সৃষ্টি করে এবং পাতা হলুদ হতে পারে, তবে এটি সাধারণত কোনও কীটনাশক প্রয়োগের প্রয়োজন হয় না। কৃষকরা রোগ প্রতিরোধী জাত বেছে নিয়ে, সংক্রামিত গাছ অপসারণ করে এবং ভারসাম্যপূর্ণ পুষ্টি নিশ্চিত করে রোগ পরিচালনা করতে পারেন।",
+    "symptoms_en": "Small cinnamon to reddish-brown powdery pustules scattered on both surfaces of the leaves; heavy infection yellows the leaves.",
+    "symptoms_bn": "পাতার উভয় পৃষ্ঠে ছোট দারুচিনি থেকে লালচে-বাদামী গুঁড়া পিণ্ড ছড়িয়ে থাকে; ভারী সংক্রমণ পাতাকে হলুদ করে দেয়।",
+    "organic_en": [
+      "Plant resistant hybrids — the most effective step.",
+      "Remove heavily infected volunteer plants.",
+      "Ensure balanced nutrition so plants tolerate infection."
+    ],
+    "chemical_en": [
+      "A foliar fungicide (triazole or strobilurin class) is only worthwhile if infection is early and severe on a susceptible crop, per label."
+    ],
+    "prevention_en": [
+      "Choose resistant hybrids and plant on time.",
+      "Avoid very dense planting that traps humidity."
+    ],
+    "expert_note_en": "Common rust rarely justifies spraying on a healthy crop. Ask your local agriculture officer before applying fungicide.",
+    "organic_bn": [
+      "রোগ প্রতিরোধী জাত গাছ লাগান - সবচেয়ে কার্যকর পদক্ষেপ।",
+      "ভারী সংক্রামিত স্বেচ্ছাসেবী গাছ অপসারণ করুন।",
+      "গাছের ভারসাম্যপূর্ণ পুষ্টি নিশ্চিত করুন যাতে গাছ সংক্রমণ সহ্য করতে পারে।"
+    ],
+    "chemical_bn": [
+      "একটি পাতার ফাঙ্গিসাইড (ট্রায়াজোল বা স্ট্রোবিলুরিন শ্রেণী) শুধুমাত্র তখনই মূল্যবান যদি সংক্রমণ প্রাথমিক এবং একটি সংবেদনশীল ফসলে তীব্র হয়, লেবেল অনুসারে।"
+    ],
+    "prevention_bn": [
+      "রোগ প্রতিরোধী জাত এবং সময়মতো লাগান।",
+      "খুব ঘন লাগানো এড়িয়ে যান যা আর্দ্রতা ধরে রাখে।"
+    ],
+    "expert_note_bn": "সাধারণ বরণ সাধারণত একটি সুস্থ ফসলে স্প্রে করার কারণ হয় না। কীটনাশক প্রয়োগের আগে আপনার স্থানীয় কৃষি অফিসারকে জিজ্ঞাসা করুন।"
+  },
+  "Corn___Northern_Leaf_Blight": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Northern Leaf Blight",
+    "crop": "Corn",
+    "summary_en": "Northern Leaf Blight is a disease affecting corn crops, characterized by long, cigar-shaped lesions on leaves, and can be managed through various methods. Early protection is crucial to prevent significant yield loss.",
+    "summary_bn": "নর্দান লিফ ব্লাইট একটি রোগ যা ভুট্টা ফসলকে প্রভাবিত করে, যার বৈশিষ্ট্য হল পাতায় লম্বা, সিগারের আকৃতির ক্ষত, এবং বিভিন্ন উপায়ে এটি পরিচালনা করা যায়। প্রাথমিক সুরক্ষা উল্লেখযোগ্য ফলন ক্ষতি প্রতিরোধে গুরুত্বপূর্ণ।",
+    "symptoms_en": "Long, cigar-shaped grey-green to tan lesions running along the leaf; lesions merge and dry out large areas of leaf.",
+    "symptoms_bn": "পাতায় লম্বা, সিগারের আকৃতির ধূসর-সবুজ থেকে বাদামী রঙের ক্ষত; ক্ষতগুলি একত্রিত হয় এবং পাতার বড় অংশ শুকিয়ে যায়।",
+    "organic_en": [
+      "Grow resistant hybrids.",
+      "Rotate crops and plough under old maize residue where the fungus survives.",
+      "Remove volunteer maize plants."
+    ],
+    "chemical_en": [
+      "A foliar fungicide applied at first lesions (around tasseling) protects yield on susceptible crops, per label."
+    ],
+    "prevention_en": [
+      "Use resistant hybrids and rotate away from maize.",
+      "Manage crop residue by tillage or removal."
+    ],
+    "expert_note_en": "Timing matters — early protection pays off, late spraying rarely does. Consult your local agriculture officer.",
+    "organic_bn": [
+      "প্রতিরোধী জাতের ভুট্টা চাষ করুন।",
+      "ফসল ঘুরান এবং পুরানো ভুট্টার অবশিষ্টাংশ পুঁতে ফেলুন যেখানে ছত্রভঙ্গ বাঁচে।",
+      "স্বেচ্ছাসেবী ভুট্টা গাছ অপসারণ করুন।"
+    ],
+    "chemical_bn": [
+      "প্রথম ক্ষত (টাসেলিংয়ের আশেপাশে) এ একটি পাতার ফাংগিসাইড প্রয়োগ করা সংবেদনশীল ফসলের ফলন রক্ষা করে, লেবেল অনুসারে।"
+    ],
+    "prevention_bn": [
+      "প্রতিরোধী জাতের ভুট্টা ব্যবহার করুন এবং ভুট্টা থেকে দূরে ফসল ঘুরান।",
+      "ফসলের অবশিষ্টাংশ পরিচালনা করুন চাষ বা অপসারণের মাধ্যমে।"
+    ],
+    "expert_note_bn": "সময় ব্যাপারটি গুরুত্বপূর্ণ — প্রাথমিক সুরক্ষা ফলাফল দেয়, পরে ছিটানো কমই কার্যকর হয়। আপনার স্থানীয় কৃষি কর্মকর্তার সাথে পরামর্শ করুন।"
+  },
+  "Corn___healthy": {
+    "grounded": true,
+    "source": "kb",
+    "disease": "Healthy",
+    "crop": "Corn",
+    "summary_en": "Good news — the corn leaf looks healthy. No disease detected.",
+    "summary_bn": "সুখবর — Corn পাতাটি সুস্থ মনে হচ্ছে। কোনো রোগ ধরা পড়েনি।",
+    "symptoms_en": "No disease symptoms detected on the leaf.",
+    "organic_en": [
+      "Keep monitoring the field regularly."
+    ],
+    "chemical_en": [],
+    "prevention_en": [
+      "Maintain balanced watering and spacing.",
+      "Remove weeds and crop debris that harbour pests.",
+      "Scout the field weekly for early symptoms."
+    ],
+    "expert_note_en": "No action needed now. Re-check if you notice spots or wilting.",
+    "organic_bn": [
+      "নিয়মিত ক্ষেত পর্যবেক্ষণ করুন।"
+    ],
+    "chemical_bn": [],
+    "prevention_bn": [
+      "সুষম সেচ ও গাছের মধ্যে দূরত্ব বজায় রাখুন।",
+      "আগাছা ও ফসলের অবশিষ্ট অংশ পরিষ্কার রাখুন।",
+      "প্রতি সপ্তাহে ক্ষেত পরীক্ষা করুন।"
+    ],
+    "expert_note_bn": "এখন কিছু করার দরকার নেই। দাগ বা নেতিয়ে পড়া দেখলে আবার পরীক্ষা করুন।"
+  },
+  "Pepper___Bacterial_spot": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Bacterial spot",
+    "crop": "Pepper",
+    "summary_en": "Bacterial spot disease in pepper crops causes small dark spots on leaves that turn brown and lead to leaf drop and scabby fruit. Prevention methods such as using disease-free seed and proper irrigation can help control the disease.",
+    "summary_bn": "মরিচে ব্যাকটেরিয়াল স্পট রোগ পাতায় ছোট কালো দাগ দেখা দেয় যা পরে বাদামী হয়ে যায় এবং পাতা ঝরে যায় এবং ফলে দাগ দেখা দেয়। রোগ প্রতিরোধের উপায় যেমন রোগমুক্ত বীজ ব্যবহার করা এবং সঠিক সেচ রোগ নিয়ন্ত্রণে সাহায্য করতে পারে।",
+    "symptoms_en": "Small dark, water-soaked spots on leaves that become brown and angular; leaves yellow and drop, and fruit gets scabby spots.",
+    "symptoms_bn": "পাতায় ছোট কালো, পানিতে ভেজা দাগ যা পরে বাদামী এবং কোণযুক্ত হয়ে যায়; পাতা হলুদ এবং ঝরে যায়, এবং ফলে দাগ দেখা দেয়।",
+    "organic_en": [
+      "Remove and destroy infected leaves and debris.",
+      "Spray copper-based product as a protectant.",
+      "Don't work among plants when they are wet."
+    ],
+    "chemical_en": [
+      "Copper plus mancozeb is the usual protectant combination; bacteria are not cured by ordinary fungicides, so follow the label and rely on prevention."
+    ],
+    "prevention_en": [
+      "Use certified disease-free seed and transplants.",
+      "Rotate away from pepper and tomato for 2-3 years.",
+      "Switch to drip irrigation and disinfect tools."
+    ],
+    "expert_note_en": "Prevention and clean seed matter more than any spray. Consult your local agriculture officer.",
+    "organic_bn": [
+      "সংক্রামিত পাতা এবং অবশিষ্টাংশ অপসারণ করুন এবং ধ্বংস করুন।",
+      "সুরক্ষা হিসেবে তামা-ভিত্তিক পণ্য স্প্রে করুন।",
+      "গাছপালা ভিজে থাকাকালীন তাদের মধ্যে কাজ করবেন না।"
+    ],
+    "chemical_bn": [
+      "তামা প্লাস ম্যানকোজেব সাধারণত সুরক্ষা সংমিশ্রণ; ব্যাকটেরিয়া সাধারণ ফাঙ্গিসাইড দ্বারা নিরাময় হয় না, তাই লেবেল অনুসরণ করুন এবং প্রতিরোধে নির্ভর করুন।"
+    ],
+    "prevention_bn": [
+      "রোগমুক্ত বীজ এবং চারা ব্যবহার করুন।",
+      "মরিচ এবং টমেটো থেকে ২-৩ বছরের জন্য দূরে সরে যান।",
+      "ড্রিপ সেচে স্যুইচ করুন এবং হাতিয়ার জীবাণুমুক্ত করুন।"
+    ],
+    "expert_note_bn": "প্রতিরোধ এবং পরিষ্কার বীজ যেকোনো স্প্রের চেয়ে বেশি বিষয়। আপনার স্থানীয় কৃষি অফিসারের সাথে পরামর্শ করুন।"
+  },
+  "Pepper___healthy": {
+    "grounded": true,
+    "source": "kb",
+    "disease": "Healthy",
+    "crop": "Pepper",
+    "summary_en": "Good news — the pepper leaf looks healthy. No disease detected.",
+    "summary_bn": "সুখবর — Pepper পাতাটি সুস্থ মনে হচ্ছে। কোনো রোগ ধরা পড়েনি।",
+    "symptoms_en": "No disease symptoms detected on the leaf.",
+    "organic_en": [
+      "Keep monitoring the field regularly."
+    ],
+    "chemical_en": [],
+    "prevention_en": [
+      "Maintain balanced watering and spacing.",
+      "Remove weeds and crop debris that harbour pests.",
+      "Scout the field weekly for early symptoms."
+    ],
+    "expert_note_en": "No action needed now. Re-check if you notice spots or wilting.",
+    "organic_bn": [
+      "নিয়মিত ক্ষেত পর্যবেক্ষণ করুন।"
+    ],
+    "chemical_bn": [],
+    "prevention_bn": [
+      "সুষম সেচ ও গাছের মধ্যে দূরত্ব বজায় রাখুন।",
+      "আগাছা ও ফসলের অবশিষ্ট অংশ পরিষ্কার রাখুন।",
+      "প্রতি সপ্তাহে ক্ষেত পরীক্ষা করুন।"
+    ],
+    "expert_note_bn": "এখন কিছু করার দরকার নেই। দাগ বা নেতিয়ে পড়া দেখলে আবার পরীক্ষা করুন।"
+  },
+  "Potato___Early_blight": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Early blight",
+    "crop": "Potato",
+    "summary_en": "Early blight is a disease affecting potatoes, characterized by small dark brown spots on lower leaves, and can be managed through various organic and chemical methods. To prevent the disease, rotation of crops, use of disease-free seed tubers, and proper irrigation techniques are recommended.",
+    "summary_bn": "পোটাটোতে হওয়া একটি রোগ হলো এরলি ব্লাইট, যার লক্ষণ হল নিচের পাতায় ছোট বাদামী দাগ, এবং এটি বিভিন্ন জৈবিক ও রাসায়নিক পদ্ধতিতে নিয়ন্ত্রণ করা যায়। রোগ প্রতিরোধের জন্য ফসল ঘুরানো, রোগমুক্ত বীজ ব্যবহার এবং সঠিক সেচ পদ্ধতি প্রয়োজন।",
+    "symptoms_en": "Small dark brown spots with concentric rings ('target spots') on lower, older leaves; surrounding tissue yellows and leaves may drop.",
+    "symptoms_bn": "নিচের, বয়স্ক পাতায় ছোট বাদামী দাগ ('টার্গেট স্পট') এবং পাতার আশেপাশের টিস্যু হলুদ হয়ে যায় এবং পাতা ঝরে যেতে পারে।",
+    "organic_en": [
+      "Pick off and destroy infected lower leaves early.",
+      "Space plants and remove weeds so leaves dry quickly after rain.",
+      "Spray a neem-based or copper-based fungicide as a protectant.",
+      "Mulch the soil to stop spores splashing up from the ground."
+    ],
+    "chemical_en": [
+      "Apply a protectant fungicide such as mancozeb or chlorothalonil, following the product label rate and interval."
+    ],
+    "prevention_en": [
+      "Rotate potato with non-host crops for 2-3 years.",
+      "Use certified disease-free seed tubers and resistant varieties where available.",
+      "Avoid overhead irrigation; water at the base.",
+      "Keep plants well-fed with balanced nitrogen so they resist infection."
+    ],
+    "expert_note_en": "Fungicide names here are general classes — always follow the label rate and pre-harvest interval, and check with your local (upazila) agriculture officer.",
+    "organic_bn": [
+      "সংক্রামিত নিচের পাতা তাড়াতাড়ি তুলে ফেলুন এবং ধ্বংস করুন।",
+      "গাছপালা দূরত্ব রাখুন এবং ঘাস অপসারণ করুন যাতে বৃষ্টির পর পাতা দ্রুত শুকিয়ে যায়।",
+      "নিম-ভিত্তিক বা তাম্র-ভিত্তিক ফাঙ্গিসাইড স্প্রে করুন।",
+      "মাটির মধ্যে ছত্রভঙ্গ থেকে স্পোর উপরে ছিটানো থেকে বাধা দিতে মাটির উপর মালচ দিন।"
+    ],
+    "chemical_bn": [
+      "ম্যানকোজেব বা ক্লোরোথালোনিলের মতো একটি প্রতিরক্ষামূলক ফাঙ্গিসাইড প্রয়োগ করুন, পণ্যের লেবেল হার এবং ব্যবধান অনুসরণ করে।"
+    ],
+    "prevention_bn": [
+      "পোটাটোকে ২-৩ বছরের জন্য অ-হোস্ট ফসলের সাথে ঘুরান।",
+      "যেখানে উপলব্ধ থাকে সেখানে রোগমুক্ত বীজ টিউবার এবং প্রতিরোধী জাত ব্যবহার করুন।",
+      "উপরের সেচ এড়িয়ে চলুন; ভিত্তি থেকে পানি দিন।",
+      "গাছপালা সুষ্ঠুভাবে খাওয়ানোর জন্য ভারসাম্যপূর্ণ নাইট্রোজেন দিন যাতে তারা সংক্রমণের বিরুদ্ধে প্রতিরোধ করতে পারে।"
+    ],
+    "expert_note_bn": "এখানে ফাঙ্গিসাইডের নাম সাধারণ শ্রেণী — সর্বদা লেবেল হার এবং পূর্ব-কাটার ব্যবধান অনুসরণ করুন এবং আপনার স্থানীয় (উপজেলা) কৃষি কর্মকর্তার সাথে যোগাযোগ করুন।"
+  },
+  "Potato___Late_blight": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Late blight",
+    "crop": "Potato",
+    "summary_en": "Late blight is a disease affecting potatoes, characterized by water-soaked dark green to brown blotches on leaves and stems, and can spread very quickly. To manage the disease, it is essential to remove infected plants, improve drainage and airflow, and use fungicides as needed.",
+    "summary_bn": "লেট ব্লাইট আলুকে প্রভাবিত করে এমন একটি রোগ, যার বৈশিষ্ট্য হল পাতা ও কাণ্ডে পানিতে ভেজা গাঢ় সবুজ থেকে বাদামী দাগ, এবং খুব দ্রুত ছড়িয়ে পড়ে। রোগটি পরিচালনা করার জন্য, সংক্রামিত গাছপালা অপসারণ করা, নিষ্কাশন ও বায়ু প্রবাহ উন্নত করা এবং প্রয়োজনে ছত্রাকনাশক ব্যবহার করা অপরিহার্য।",
+    "symptoms_en": "Water-soaked dark green to brown blotches on leaves and stems, often with a white fuzzy mould on the underside in humid weather; spreads very fast.",
+    "symptoms_bn": "পাতা ও কাণ্ডে পানিতে ভেজা গাঢ় সবুজ থেকে বাদামী দাগ, প্রায়শই আর্দ্র আবহাওয়ায় নিচের দিকে একটি সাদা ফ্লাফি ছত্রাক সহ; খুব দ্রুত ছড়িয়ে পড়ে।",
+    "organic_en": [
+      "Remove and destroy infected plants immediately — do not compost them.",
+      "Improve drainage and airflow to keep foliage dry.",
+      "Spray copper-based fungicide protectively before symptoms worsen."
+    ],
+    "chemical_en": [
+      "Use a protectant fungicide (mancozeb or chlorothalonil) before infection; switch to a systemic blight fungicide if the disease is already active, per label."
+    ],
+    "prevention_en": [
+      "Plant certified seed and resistant varieties.",
+      "Destroy volunteer potatoes and nearby cull piles.",
+      "Avoid overhead watering; scout fields closely in cool, humid spells.",
+      "Hill soil over tubers so spores can't reach them."
+    ],
+    "expert_note_en": "Late blight moves fast — if several plants are affected, act the same day and consult your local agriculture officer about the right fungicide.",
+    "organic_bn": [
+      "সংক্রামিত গাছপালা অবিলম্বে অপসারণ করুন এবং ধ্বংস করুন — তাদের কম্পোস্ট করবেন না।",
+      "নিষ্কাশন ও বায়ু প্রবাহ উন্নত করুন পাতাগুলিকে শুষ্ক রাখতে।",
+      "লক্ষণগুলি বাড়ার আগে সুরক্ষামূলকভাবে তামাভিত্তিক ছত্রাকনাশক স্প্রে করুন।"
+    ],
+    "chemical_bn": [
+      "সংক্রমণের আগে একটি সুরক্ষামূলক ছত্রাকনাশক (ম্যানকোজেব বা ক্লোরোথালোনিল) ব্যবহার করুন; যদি রোগটি ইতিমধ্যেই সক্রিয় হয়, তাহলে লেবেল অনুসারে একটি সিস্টেমিক ব্লাইট ছত্রাকনাশকে পরিবর্তন করুন।"
+    ],
+    "prevention_bn": [
+      "প্রশংসিত বীজ এবং প্রতিরোধী জাতগুলি লাগান।",
+      "স্বেচ্ছাসেবী আলু এবং নিকটবর্তী কাল পাইলগুলি ধ্বংস করুন।",
+      "ওভারহেড জল দেওয়া এড়িয়ে যান; শীতল, আর্দ্র মৌসুমে ক্ষেতগুলি ঘনিষ্ঠভাবে তদন্ত করুন।",
+      "মাটি টিউবারের উপরে তুলুন যাতে ছত্রাকের বীজ তাদের কাছে পৌঁছাতে না পারে।"
+    ],
+    "expert_note_bn": "লেট ব্লাইট দ্রুত ছড়িয়ে পড়ে — যদি বেশ কয়েকটি গাছ আক্রান্ত হয়, একই দিনে কাজ করুন এবং সঠিক ছত্রাকনাশক সম্পর্কে আপনার স্থানীয় কৃষি অফিসারের সাথে পরামর্শ করুন।"
+  },
+  "Potato___healthy": {
+    "grounded": true,
+    "source": "kb",
+    "disease": "Healthy",
+    "crop": "Potato",
+    "summary_en": "Good news — the potato leaf looks healthy. No disease detected.",
+    "summary_bn": "সুখবর — Potato পাতাটি সুস্থ মনে হচ্ছে। কোনো রোগ ধরা পড়েনি।",
+    "symptoms_en": "No disease symptoms detected on the leaf.",
+    "organic_en": [
+      "Keep monitoring the field regularly."
+    ],
+    "chemical_en": [],
+    "prevention_en": [
+      "Maintain balanced watering and spacing.",
+      "Remove weeds and crop debris that harbour pests.",
+      "Scout the field weekly for early symptoms."
+    ],
+    "expert_note_en": "No action needed now. Re-check if you notice spots or wilting.",
+    "organic_bn": [
+      "নিয়মিত ক্ষেত পর্যবেক্ষণ করুন।"
+    ],
+    "chemical_bn": [],
+    "prevention_bn": [
+      "সুষম সেচ ও গাছের মধ্যে দূরত্ব বজায় রাখুন।",
+      "আগাছা ও ফসলের অবশিষ্ট অংশ পরিষ্কার রাখুন।",
+      "প্রতি সপ্তাহে ক্ষেত পরীক্ষা করুন।"
+    ],
+    "expert_note_bn": "এখন কিছু করার দরকার নেই। দাগ বা নেতিয়ে পড়া দেখলে আবার পরীক্ষা করুন।"
+  },
+  "Rice___Bacterial_leaf_blight": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Bacterial leaf blight",
+    "crop": "Rice",
+    "summary_en": "Bacterial leaf blight of rice is characterized by water-soaked yellow streaks on leaves and can be managed through resistant varieties and good nutrient management. It is essential to focus on prevention and resistant varieties as there is no reliable chemical cure.",
+    "summary_bn": "ধানের ব্যাকটেরিয়াল পাতা ব্লাইট পাতার প্রান্ত বরাবর জল-ভেজা হলুদ রেখা দ্বারা চিহ্নিত করা হয় এবং প্রতিরোধী জাত ও পুষ্টি ব্যবস্থাপনার মাধ্যমে পরিচালিত হয়। কোনও নির্ভরযোগ্য রাসায়নিক চিকিত্সা না থাকায় প্রতিরোধ ও প্রতিরোধী জাতের উপর ফোকাস করা অপরিহার্য।",
+    "symptoms_en": "Water-soaked yellow streaks along the leaf edges that spread and turn the leaf greyish-white and dry; young plants can wilt ('kresek').",
+    "symptoms_bn": "পাতার প্রান্ত বরাবর জল-ভেজা হলুদ রেখা যা ছড়িয়ে পড়ে এবং পাতাটিকে ধূসর-সাদা ও শুকনো করে তোলে; অল্পবয়স্ক গাছগুলি নলিনী ('ক্রেসেক') হতে পারে।",
+    "organic_en": [
+      "Drain the field periodically to reduce spread where possible.",
+      "Remove and destroy severely infected plants and weed hosts on bunds.",
+      "Avoid excessive nitrogen, which makes plants more susceptible."
+    ],
+    "chemical_en": [
+      "There is no reliable chemical cure; copper-based sprays give limited protection. Focus on resistant varieties and nutrient management, per local advice."
+    ],
+    "prevention_en": [
+      "Grow resistant varieties suited to your area.",
+      "Use clean, certified seed and treat seed before sowing.",
+      "Apply balanced fertiliser and avoid over-application of nitrogen.",
+      "Keep bunds weed-free and manage water carefully."
+    ],
+    "expert_note_en": "Bacterial blight is managed mainly through resistant varieties and good nutrient/water management, not sprays. Consult your local agriculture officer.",
+    "organic_bn": [
+      "যেখানে সম্ভব ছড়িয়ে পড়া কমাতে মাঠটি পর্যায়ক্রমে নিষ্কাশন করুন।",
+      "মারাত্মকভাবে সংক্রামিত গাছপালা এবং বাঁধের আগাছা অপসারণ ও ধ্বংস করুন।",
+      "অতিরিক্ত নাইট্রোজেন এড়িয়ে চলুন, যা গাছপালাকে আরও সংবেদনশীল করে তোলে।"
+    ],
+    "chemical_bn": [
+      "কোনও নির্ভরযোগ্য রাসায়নিক চিকিত্সা নেই; তামা-ভিত্তিক স্প্রে সীমিত সুরক্ষা দেয়। স্থানীয় পরামর্শ অনুসারে প্রতিরোধী জাত এবং পুষ্টি ব্যবস্থাপনার উপর ফোকাস করুন।"
+    ],
+    "prevention_bn": [
+      "আপনার এলাকার উপযোগী প্রতিরোধী জাত চাষ করুন।",
+      "বীজ বোনার আগে পরিষ্কার, প্রমাণিত বীজ ব্যবহার করুন এবং বীজ চিকিত্সা করুন।",
+      "ভারসাম্যপূর্ণ সার প্রয়োগ করুন এবং নাইট্রোজেনের অতিরিক্ত প্রয়োগ এড়িয়ে চলুন।",
+      "বাঁধগুলিকে আগাছা-মুক্ত রাখুন এবং জল সাবধানে পরিচালনা করুন।"
+    ],
+    "expert_note_bn": "ব্যাকটেরিয়াল ব্লাইট প্রধানত প্রতিরোধী জাত এবং ভাল পুষ্টি/জল ব্যবস্থাপনার মাধ্যমে পরিচালিত হয়, স্প্রে নয়। আপনার স্থানীয় কৃষি কর্মকর্তার সাথে পরামর্শ করুন।"
+  },
+  "Rice___Blast": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Blast",
+    "crop": "Rice",
+    "summary_en": "Rice blast disease causes diamond- or spindle-shaped spots on leaves and dark lesions on the neck below the panicle, leading to grain head breakage or emptying. To manage the disease, farmers can use a combination of organic, chemical, and preventive methods.",
+    "summary_bn": "ধানের ব্লাস্ট রোগ পাতায় হীরা বা স্পিন্ডল আকৃতির দাগ এবং পানিকলের নিচে গলায় কালো দাগ সৃষ্টি করে, যার ফলে ধানের মাথা ভেঙে যেতে পারে বা খালি থাকতে পারে। রোগ নিয়ন্ত্রণের জন্য কৃষকরা জৈবিক, রাসায়নিক এবং প্রতিরোধমূলক পদ্ধতির সমন্বয় ব্যবহার করতে পারেন।",
+    "symptoms_en": "Diamond- or spindle-shaped spots with grey centres and brown margins on leaves; dark lesions on the neck below the panicle that can cause the grain head to break or stay empty.",
+    "symptoms_bn": "পাতায় ধূসর কেন্দ্র এবং বাদামী প্রান্ত সহ হীরা বা স্পিন্ডল আকৃতির দাগ; পানিকলের নিচে গলায় কালো দাগ যা ধানের মাথা ভেঙে যেতে পারে বা খালি থাকতে পারে।",
+    "organic_en": [
+      "Remove infected stubble and weed hosts after harvest.",
+      "Avoid heavy nitrogen and split the nitrogen dose instead of applying all at once.",
+      "Keep a steady water level; avoid drought stress that worsens blast."
+    ],
+    "chemical_en": [
+      "Preventive fungicides (tricyclazole or a strobilurin, per label) are used at the leaf stage and again before heading on susceptible varieties, following local recommendations."
+    ],
+    "prevention_en": [
+      "Grow blast-resistant varieties.",
+      "Use certified, treated seed.",
+      "Manage nitrogen carefully and maintain even water.",
+      "Do not plant too densely."
+    ],
+    "expert_note_en": "Neck blast around heading is the most damaging stage — time any preventive spray before heading and consult your local agriculture officer.",
+    "organic_bn": [
+      "ফসল কাটার পরে সংক্রামিত খড় এবং আগাছা অপসারণ করুন।",
+      "ভারী নাইট্রোজেন এড়িয়ে যান এবং নাইট্রোজেন ডোজ বিভক্ত করুন; একবারে সব প্রয়োগ করবেন না।",
+      "জলের স্তর স্থিতিশীল রাখুন; খরা জনিত চাপ যা ব্লাস্টকে বাড়িয়ে তোলে তা এড়িয়ে যান।"
+    ],
+    "chemical_bn": [
+      "প্রতিরোধক ফাঙ্গিসাইড (ট্রাইসাইক্লোজল বা স্ট্রোবিলুরিন, লেবেল অনুসারে) পাতা পর্যায়ে এবং সংবেদনশীল জাতের মাথা বের হওয়ার আগে ব্যবহার করা হয়, স্থানীয় সুপারিশ অনুসরণ করে।"
+    ],
+    "prevention_bn": [
+      "ব্লাস্ট-প্রতিরোধী জাত চাষ করুন।",
+      "প্রমাণিত, চিকিত্সা করা বীজ ব্যবহার করুন।",
+      "নাইট্রোজেন সাবধানে পরিচালনা করুন এবং সমান জল বজায় রাখুন।",
+      "খুব ঘন ঘন চাষ করবেন না।"
+    ],
+    "expert_note_bn": "ফুল বের হওয়ার সময় গলার ব্লাস্ট সবচেয়ে বেশি ক্ষতিকারক — ফুল বের হওয়ার আগে প্রতিরোধক স্প্রে সময় করুন এবং আপনার স্থানীয় কৃষি অফিসারের সাথে পরামর্শ করুন।"
+  },
+  "Rice___Brown_spot": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Brown spot",
+    "crop": "Rice",
+    "summary_en": "Brown spot disease in rice is characterized by small, oval brown spots on leaves and grains, and can be managed through soil nutrition correction and other methods. Proper prevention and treatment can help reduce the impact of this disease on rice crops.",
+    "summary_bn": "ধানে ব্রাউন স্পট রোগে পাতা ও ধানের দানায় ছোট, ডিম্বাকার বাদামী দাগ দেখা যায়, এবং মাটির পুষ্টি সংশোধন ও অন্যান্য পদ্ধতির মাধ্যমে এটি পরিচালনা করা যায়। যথাযথ প্রতিরোধ ও চিকিত্সার মাধ্যমে ধানের ফসলে এই রোগের প্রভাব কমানো যায়।",
+    "symptoms_en": "Many small, oval brown spots scattered across the leaves (and on grains); heavy spotting on nutrient-poor soils reduces grain filling.",
+    "symptoms_bn": "পাতা ও দানায় অনেকগুলো ছোট, ডিম্বাকার বাদামী দাগ ছড়িয়ে থাকে (এবং দানায়); পুষ্টি-অপুষ্টি মাটিতে ভারী দাগ দেখা দেয় যা দানা পূরণ কমিয়ে দেয়।",
+    "organic_en": [
+      "Correct the underlying soil nutrition, especially potassium and micronutrients.",
+      "Use well-decomposed organic matter to improve soil health.",
+      "Remove infected debris after harvest."
+    ],
+    "chemical_en": [
+      "Seed treatment and a protectant fungicide (e.g. mancozeb) can help on badly affected crops, per label and local advice."
+    ],
+    "prevention_en": [
+      "Test and correct soil fertility before planting.",
+      "Use certified, treated seed and resistant varieties.",
+      "Avoid water stress during the season."
+    ],
+    "expert_note_en": "Brown spot is often a 'hungry soil' disease — fixing nutrition usually helps more than spraying. Consult your local agriculture officer.",
+    "organic_bn": [
+      "মাটির অন্তর্নিহিত পুষ্টি, বিশেষ করে পোটাশিয়াম ও সূক্ষ্ম পুষ্টি সংশোধন করুন।",
+      "মাটির স্বাস্থ্য উন্নত করতে সুপুষ্ট জৈব পদার্থ ব্যবহার করুন।",
+      "কাটাইয়ের পরে সংক্রামিত অবশিষ্টাংশ অপসারণ করুন।"
+    ],
+    "chemical_bn": [
+      "বীজ চিকিত্সা এবং একটি সুরক্ষামূলক ছত্রাকনাশক (যেমন ম্যাঙ্কোজেব) খারাপভাবে আক্রান্ত ফসলে সাহায্য করতে পারে, লেবেল এবং স্থানীয় পরামর্শ অনুসারে।"
+    ],
+    "prevention_bn": [
+      "রোপণের আগে মাটির উর্বরতা পরীক্ষা করুন এবং সংশোধন করুন।",
+      "প্রমাণিত, চিকিত্সা করা বীজ এবং প্রতিরোধী জাত ব্যবহার করুন।",
+      "ঋতু চলাকালীন জল সংকট এড়িয়ে চলুন।"
+    ],
+    "expert_note_bn": "ব্রাউন স্পট প্রায়শই 'ক্ষুধার্ত মাটি' রোগ — পুষ্টি সংশোধন করা স্প্রে করার চেয়ে বেশি সাহায্য করে। আপনার স্থানীয় কৃষি অফিসারের সাথে পরামর্শ করুন।"
+  },
+  "Rice___Tungro": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Tungro",
+    "crop": "Rice",
+    "summary_en": "Tungro disease in rice is characterized by yellow to orange discolouration of leaves and stunted growth, and its management focuses on controlling the green leafhopper vector and growing resistant varieties. Removing infected plants and synchronizing planting with neighbors are also crucial in preventing the spread of the disease.",
+    "summary_bn": "ধানে টুঙ্গরো রোগ পাতার হলুদ থেকে কমলা রঙের রঙ পরিবর্তন এবং বাড়ন্ত বৃদ্ধি দ্বারা চিহ্নিত করা হয়, এবং এর ব্যবস্থাপনা সবুজ পাতা হপার ভেক্টর নিয়ন্ত্রণ এবং প্রতিরোধী জাত চাষের উপর দৃষ্টি নিবদ্ধ করে। আক্রান্ত গাছ অপসারণ এবং প্রতিবেশীদের সাথে রোপণ সমন্বয় করা রোগের বিস্তার প্রতিরোধে গুরুত্বপূর্ণ।",
+    "symptoms_en": "Yellow to orange discolouration of leaves starting from the tip, stunted growth, and reduced tillering; patches of affected plants in the field.",
+    "symptoms_bn": "পাতার ডগায় শুরু হওয়া হলুদ থেকে কমলা রঙের রঙ পরিবর্তন, বাড়ন্ত বৃদ্ধি এবং কম টিলারিং; ক্ষেতে আক্রান্ত গাছের দল।",
+    "organic_en": [
+      "Remove and destroy infected plants and volunteer/ratoon rice that host the virus.",
+      "Encourage natural enemies of leafhoppers and use light traps to monitor them.",
+      "Synchronise planting with neighbours and avoid staggered planting that keeps hoppers active."
+    ],
+    "chemical_en": [
+      "No spray cures the virus — manage the green leafhopper vector with an approved insecticide only when monitoring shows high numbers, per label."
+    ],
+    "prevention_en": [
+      "Grow tungro-resistant varieties where available.",
+      "Plant early and in synchrony with the community.",
+      "Control leafhoppers and remove infected plants promptly."
+    ],
+    "expert_note_en": "Because tungro is a virus, focus on resistant varieties and leafhopper control rather than curing the plant. Consult your local agriculture officer.",
+    "organic_bn": [
+      "আক্রান্ত গাছ এবং ভলান্টার/র্যাটন ধান অপসারণ ও ধ্বংস করুন যা ভাইরাসকে হোস্ট করে।",
+      "পাতা হপারের প্রাকৃতিক শত্রুদের উত্সাহিত করুন এবং তাদের নিরীক্ষণ করতে লাইট ট্র্যাপ ব্যবহার করুন।",
+      "প্রতিবেশীদের সাথে রোপণ সমন্বয় করুন এবং হপারকে সক্রিয় রাখার জন্য ধাপে ধাপে রোপণ এড়িয়ে যান।"
+    ],
+    "chemical_bn": [
+      "কোনো স্প্রে ভাইরাসকে নিরাময় করে না — অনুমোদিত কীটনাশক দ্বারা সবুজ পাতা হপার ভেক্টর পরিচালনা করুন যখন নিরীক্ষণ উচ্চ সংখ্যা দেখায়, লেবেল অনুসারে।"
+    ],
+    "prevention_bn": [
+      "যেখানে উপলব্ধ থাকে সেখানে টুঙ্গরো-প্রতিরোধী জাত চাষ করুন।",
+      "প্রাথমিকভাবে এবং সম্প্রদায়ের সাথে সমন্বয় করে রোপণ করুন।",
+      "পাতা হপার নিয়ন্ত্রণ করুন এবং আক্রান্ত গাছ দ্রুত অপসারণ করুন।"
+    ],
+    "expert_note_bn": "যেহেতু টুঙ্গরো একটি ভাইরাস, তাই গাছটি নিরাময় করার পরিবর্তে প্রতিরোধী জাত এবং পাতা হপার নিয়ন্ত্রণের উপর ফোকাস করুন। আপনার স্থানীয় কৃষি অফিসারের সাথে পরামর্শ করুন।"
+  },
+  "Rice___healthy": {
+    "grounded": true,
+    "source": "kb",
+    "disease": "Healthy",
+    "crop": "Rice",
+    "summary_en": "Good news — the rice leaf looks healthy. No disease detected.",
+    "summary_bn": "সুখবর — Rice পাতাটি সুস্থ মনে হচ্ছে। কোনো রোগ ধরা পড়েনি।",
+    "symptoms_en": "No disease symptoms detected on the leaf.",
+    "organic_en": [
+      "Keep monitoring the field regularly."
+    ],
+    "chemical_en": [],
+    "prevention_en": [
+      "Maintain balanced watering and spacing.",
+      "Remove weeds and crop debris that harbour pests.",
+      "Scout the field weekly for early symptoms."
+    ],
+    "expert_note_en": "No action needed now. Re-check if you notice spots or wilting.",
+    "organic_bn": [
+      "নিয়মিত ক্ষেত পর্যবেক্ষণ করুন।"
+    ],
+    "chemical_bn": [],
+    "prevention_bn": [
+      "সুষম সেচ ও গাছের মধ্যে দূরত্ব বজায় রাখুন।",
+      "আগাছা ও ফসলের অবশিষ্ট অংশ পরিষ্কার রাখুন।",
+      "প্রতি সপ্তাহে ক্ষেত পরীক্ষা করুন।"
+    ],
+    "expert_note_bn": "এখন কিছু করার দরকার নেই। দাগ বা নেতিয়ে পড়া দেখলে আবার পরীক্ষা করুন।"
+  },
+  "Tomato___Bacterial_spot": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Bacterial spot",
+    "crop": "Tomato",
+    "summary_en": "Bacterial spot disease in tomatoes causes dark spots on leaves and scabby spots on fruit, and while copper-based products can help, prevention and sanitation are key to managing the disease. Regular removal of infected leaves and debris, along with proper irrigation and tool disinfection, can help prevent the spread of the disease.",
+    "summary_bn": "টমেটোতে ব্যাকটেরিয়াল স্পট রোগ পাতায় কালো দাগ এবং ফলে দানাদার দাগ সৃষ্টি করে, আর যদিও কপার-ভিত্তিক পণ্যগুলি সাহায্য করতে পারে, তবে প্রতিরোধ এবং স্বাস্থ্যবিধি রোগ নিয়ন্ত্রণে সবচেয়ে গুরুত্বপূর্ণ। নিয়মিত আক্রান্ত পাতা এবং অবশিষ্টাংশ অপসারণ, সাথে সঠিক সেচ এবং হাতিয়ার জীবাণুমুক্ত করা রোগের বিস্তার রোধে সাহায্য করতে পারে।",
+    "symptoms_en": "Small dark, water-soaked spots on leaves that turn brown with a yellow halo; scabby raised spots on fruit.",
+    "symptoms_bn": "পাতায় ছোট কালো, পানি-ভেজা দাগ যা বাদামী হয়ে যায় এবং একটি হলুদ আলোর সাথে; ফলে দানাদার উত্থিত দাগ।",
+    "organic_en": [
+      "Remove and destroy infected leaves and debris.",
+      "Spray a copper-based product regularly as a protectant.",
+      "Avoid touching or harvesting plants while they are wet."
+    ],
+    "chemical_en": [
+      "Copper combined with mancozeb is the usual recommendation; follow the label — note bacteria are not cured by ordinary fungicides."
+    ],
+    "prevention_en": [
+      "Start with certified disease-free seed and transplants.",
+      "Rotate away from tomato and pepper for 2-3 years.",
+      "Use drip irrigation instead of overhead watering.",
+      "Disinfect stakes and tools between uses."
+    ],
+    "expert_note_en": "Copper slows bacterial spread but won't cure it — prevention and sanitation matter most. Check with your local agriculture officer.",
+    "organic_bn": [
+      "আক্রান্ত পাতা এবং অবশিষ্টাংশ অপসারণ ও ধ্বংস করুন।",
+      "নিয়মিত একটি কপার-ভিত্তিক পণ্য স্প্রে করুন।",
+      "উদ্ভিদগুলি ভিজা অবস্থায় স্পর্শ বা কাটার এড়িয়ে চলুন।"
+    ],
+    "chemical_bn": [
+      "কপার সাথে ম্যানকোজেব সাধারণত সুপারিশ করা হয়; লেবেল অনুসরণ করুন — মনে রাখবেন ব্যাকটেরিয়া সাধারণ ফাঙ্গিসাইড দ্বারা নিরাময় হয় না।"
+    ],
+    "prevention_bn": [
+      "প্রমাণিত রোগমুক্ত বীজ এবং চারা দিয়ে শুরু করুন।",
+      "টমেটো এবং মরিচ থেকে ২-৩ বছরের জন্য ঘুরে যান।",
+      "ওভারহেড সেচের পরিবর্তে ড্রিপ সেচ ব্যবহার করুন।",
+      "ব্যবহারের মধ্যে স্টেক এবং হাতিয়ার জীবাণুমুক্ত করুন।"
+    ],
+    "expert_note_bn": "কপার ব্যাকটেরিয়ার বিস্তার ধীর করে কিন্তু এটি নিরাময় করে না — প্রতিরোধ এবং স্বাস্থ্যবিধি সবচেয়ে গুরুত্বপূর্ণ। আপনার স্থানীয় কৃষি অফিসারের সাথে যোগাযোগ করুন।"
+  },
+  "Tomato___Early_blight": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Early blight",
+    "crop": "Tomato",
+    "summary_en": "Early blight is a disease affecting tomatoes, characterized by dark brown spots and yellowing on older leaves. To manage the disease, farmers can use a combination of organic and chemical methods, as well as preventive measures.",
+    "summary_bn": "প্রাথমিক ব্লাইট একটি রোগ যা টমেটোকে প্রভাবিত করে, যার বৈশিষ্ট্য হল বয়স্ক পাতাগুলিতে গাঢ় বাদামী দাগ এবং হলুদ রঙ। রোগটি নিয়ন্ত্রণ করার জন্য, কৃষকরা জৈবিক এবং রাসায়নিক উভয় পদ্ধতি ব্যবহার করতে পারেন, সেইসাথে প্রতিরোধমূলক ব্যবস্থা নিতে পারেন।",
+    "symptoms_en": "Dark brown spots with concentric rings on older leaves, yellowing around them, and progressive leaf drop from the bottom up.",
+    "symptoms_bn": "বয়স্ক পাতাগুলিতে গাঢ় বাদামী দাগ এবং তাদের চারপাশে হলুদ রঙ, এবং নীচের দিক থেকে পাতা ঝরে যাওয়া।",
+    "organic_en": [
+      "Remove infected lower leaves and mulch the soil surface.",
+      "Stake plants and space them for good airflow.",
+      "Apply neem or copper fungicide as a protectant."
+    ],
+    "chemical_en": [
+      "Protectant fungicides such as chlorothalonil or mancozeb, applied per label at first symptoms."
+    ],
+    "prevention_en": [
+      "Rotate crops and remove crop residue after harvest.",
+      "Water at the base, keeping foliage dry.",
+      "Choose resistant varieties where available."
+    ],
+    "expert_note_en": "Follow the label rate and pre-harvest interval; consult your local agriculture officer for the right product.",
+    "organic_bn": [
+      "সংক্রামিত নীচের পাতা অপসারণ করুন এবং মাটির পৃষ্ঠকে মালচ করুন।",
+      "গাছগুলিকে স্টেক করুন এবং ভাল বায়ু প্রবাহের জন্য তাদের স্থান দিন।",
+      "নীম বা কপার ফাংগিসাইড প্রয়োগ করুন একটি সুরক্ষাকারী হিসাবে।"
+    ],
+    "chemical_bn": [
+      "ক্লোরোথালোনিল বা ম্যানকোজেবের মতো সুরক্ষাকারী ছত্রাকনাশক, প্রথম লক্ষণে লেবেল অনুসারে প্রয়োগ করা হয়।"
+    ],
+    "prevention_bn": [
+      "ফসল ঘুরান এবং কাটার পরে ফসলের অবশিষ্টাংশ অপসারণ করুন।",
+      "পাতাগুলিকে শুকনো রেখে ভিত্তির কাছে পানি দিন।",
+      "যেখানে উপলব্ধ থাকে সেখানে প্রতিরোধী জাতগুলি বেছে নিন।"
+    ],
+    "expert_note_bn": "লেবেল রেট এবং কাটার আগের ব্যবধান অনুসরণ করুন; সঠিক পণ্যের জন্য আপনার স্থানীয় কৃষি অফিসারের সাথে পরামর্শ করুন।"
+  },
+  "Tomato___Late_blight": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Late blight",
+    "crop": "Tomato",
+    "summary_en": "Late blight is a disease affecting tomatoes, characterized by large greasy grey-green to brown blotches on leaves and stems, and firm brown patches on fruit. It is essential to act quickly upon noticing the symptoms to prevent the disease from spreading.",
+    "summary_bn": "লেট ব্লাইট টমেটোতে আক্রান্ত একটি রোগ, যার বৈশিষ্ট্য হল পাতা ও কাণ্ডে বড় চরবিযুক্ত ধূসর-সবুজ থেকে বাদামী দাগ এবং ফলে দৃঢ় বাদামী দাগ। এটি দেখা মাত্রই দ্রুত ব্যবস্থা নেওয়া অত্যন্ত গুরুত্বপূর্ণ যাতে রোগটি ছড়িয়ে না পড়ে।",
+    "symptoms_en": "Large greasy grey-green to brown blotches on leaves and stems, sometimes with white mould underneath; fruit develops firm brown patches.",
+    "symptoms_bn": "পাতা ও কাণ্ডে বড় চরবিযুক্ত ধূসর-সবুজ থেকে বাদামী দাগ, কখনও কখনও নীচে সাদা ছত্রাক সহ; ফলে দৃঢ় বাদামী দাগ তৈরি হয়।",
+    "organic_en": [
+      "Pull and destroy infected plants right away.",
+      "Improve spacing and airflow; avoid wetting the leaves.",
+      "Spray copper fungicide protectively."
+    ],
+    "chemical_en": [
+      "Protectant mancozeb or chlorothalonil before infection; a systemic late-blight fungicide if already active, per label."
+    ],
+    "prevention_en": [
+      "Use resistant varieties and healthy transplants.",
+      "Avoid overhead irrigation and crowded planting.",
+      "Scout closely during cool, wet weather."
+    ],
+    "expert_note_en": "Act the same day you see it — late blight spreads fast. Consult your local agriculture officer.",
+    "organic_bn": [
+      "সংক্রামিত গাছগুলো অবিলম্বে তুলে ফেলুন।",
+      "ফাঁক ও বাতাস চলাচল উন্নত করুন; পাতা ভিজিয়ে এড়িয়ে চলুন।",
+      "প্রতিরোধী ছত্রাকনাশক কপার স্প্রে করুন।"
+    ],
+    "chemical_bn": [
+      "সংক্রমণের আগে ম্যানকোজেব বা ক্লোরোথালোনিল প্রতিরোধী; যদি ইতিমধ্যেই সক্রিয় হয়ে থাকে তবে লেবেল অনুযায়ী একটি সিস্টেমিক লেট-ব্লাইট ছত্রাকনাশক।"
+    ],
+    "prevention_bn": [
+      "প্রতিরোধী জাত এবং সুস্থ চারা ব্যবহার করুন।",
+      "ওভারহেড সেচ এবং ভিড় লাগানো এড়িয়ে চলুন।",
+      "ঠাণ্ডা, ভেজা আবহাওয়ার সময় ঘনিষ্ঠভাবে পর্যবেক্ষণ করুন।"
+    ],
+    "expert_note_bn": "এটি দেখা মাত্রই একই দিনে কাজ করুন — লেট ব্লাইট দ্রুত ছড়িয়ে পড়ে। আপনার স্থানীয় কৃষি অফিসারের সাথে পরামর্শ করুন।"
+  },
+  "Tomato___Leaf_Mold": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Leaf Mold",
+    "crop": "Tomato",
+    "summary_en": "Leaf Mold disease affects Tomato crops, causing pale yellow patches and olive-green to grey velvety mould on leaves, which eventually yellow and drop. Managing humidity and airflow is crucial in controlling the disease.",
+    "summary_bn": "পাতা মোল্ড রোগ টমেটো ফসলকে প্রভাবিত করে, যার ফলে পাতায় ফ্যাকাশে হলুদ দাগ এবং পাতার নিচে জলপাই-সবুজ থেকে ধূসর রোমশ মোল্ড দেখা দেয়, যা শেষ পর্যন্ত হলুদ এবং পড়ে যায়। আর্দ্রতা এবং বাতাস প্রবাহ পরিচালনা করা রোগ নিয়ন্ত্রণে অত্যন্ত গুরুত্বপূর্ণ।",
+    "symptoms_en": "Pale yellow patches on the upper leaf surface with an olive-green to grey velvety mould on the underside; leaves yellow and drop.",
+    "symptoms_bn": "পাতার উপরিভাগে ফ্যাকাশে হলুদ দাগ এবং পাতার নিচে জলপাই-সবুজ থেকে ধূসর রোমশ মোল্ড; পাতা হলুদ এবং পড়ে যায়।",
+    "organic_en": [
+      "Increase ventilation and reduce humidity around plants.",
+      "Remove and destroy affected leaves.",
+      "Apply copper fungicide as a protectant."
+    ],
+    "chemical_en": [
+      "Chlorothalonil or mancozeb protectant sprays per label."
+    ],
+    "prevention_en": [
+      "Space and prune plants for airflow; avoid leaf wetness.",
+      "Use resistant varieties, especially under cover.",
+      "Water early in the day so leaves dry fast."
+    ],
+    "expert_note_en": "Managing humidity and airflow usually does more than spraying. Consult your local agriculture officer if it persists.",
+    "organic_bn": [
+      "গাছের চারপাশে বাতাস প্রবাহ বাড়ান এবং আর্দ্রতা কমান।",
+      "আক্রান্ত পাতা অপসারণ করুন এবং ধ্বংস করুন।",
+      "সুরক্ষা হিসেবে তাম্র ফাঙ্গিসাইড প্রয়োগ করুন।"
+    ],
+    "chemical_bn": [
+      "লেবেল অনুসারে ক্লোরোথালোনিল বা ম্যাঙ্কোজেব সুরক্ষা স্প্রে ব্যবহার করুন।"
+    ],
+    "prevention_bn": [
+      "বাতাস প্রবাহের জন্য গাছের মধ্যে ফাঁক দিন এবং প্রজনন করুন; পাতার ভিজে যাওয়া এড়িয়ে চলুন।",
+      "প্রতিরোধী জাত, বিশেষ করে আচ্ছাদিত অবস্থায় ব্যবহার করুন।",
+      "দিনের প্রথম দিকে পানি দিন যাতে পাতা দ্রুত শুকিয়ে যায়।"
+    ],
+    "expert_note_bn": "আর্দ্রতা এবং বাতাস প্রবাহ পরিচালনা করা সাধারণত স্প্রে করার চেয়ে বেশি কার্যকর। যদি এটি অব্যাহত থাকে তবে আপনার স্থানীয় কৃষি অফিসারের সাথে পরামর্শ করুন।"
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Septoria leaf spot",
+    "crop": "Tomato",
+    "summary_en": "Septoria leaf spot is a disease affecting tomatoes, characterized by small circular spots on lower leaves, leading to yellowing and defoliation. Removing infected leaves, maintaining sanitation, and using fungicides can help manage the disease.",
+    "summary_bn": "সেপ্টোরিয়া পাতা দাগ টমেটোতে আক্রমণকারী একটি রোগ, যা নিচের পাতায় ছোট বৃত্তাকার দাগ দেখা দেয়, যার ফলে পাতা হলুদ হয়ে যায় এবং ঝরে যায়। আক্রান্ত পাতা অপসারণ, পরিচ্ছন্নতা বজায় রাখা এবং ছত্রাকনাশক ব্যবহার করে রোগ নিয়ন্ত্রণ করা যায়।",
+    "symptoms_en": "Numerous small circular spots with dark brown margins and grey centres on lower leaves; heavy spotting causes yellowing and defoliation.",
+    "symptoms_bn": "নিচের পাতায় অনেকগুলি ছোট বৃত্তাকার দাগ যার গাঢ় বাদামী প্রান্ত এবং ধূসর কেন্দ্র, ভারী দাগ হলে পাতা হলুদ হয়ে যায় এবং ঝরে যায়।",
+    "organic_en": [
+      "Remove infected lower leaves and destroy crop debris.",
+      "Mulch to stop soil splash; keep foliage dry.",
+      "Apply copper fungicide protectively."
+    ],
+    "chemical_en": [
+      "Chlorothalonil or mancozeb, applied per label at first sign."
+    ],
+    "prevention_en": [
+      "Rotate crops and practise good field sanitation.",
+      "Avoid overhead irrigation.",
+      "Stake and space plants for airflow."
+    ],
+    "expert_note_en": "Sanitation and rotation are key. Follow the fungicide label and ask your local agriculture officer.",
+    "organic_bn": [
+      "আক্রান্ত নিচের পাতা অপসারণ করুন এবং ফসলের অবশিষ্টাংশ ধ্বংস করুন।",
+      "মাটির ছিটানো বন্ধ করতে মালচ দিন; পাতা শুকনো রাখুন।",
+      "সুরক্ষামূলকভাবে কপার ছত্রাকনাশক প্রয়োগ করুন।"
+    ],
+    "chemical_bn": [
+      "ক্লোরোথালোনিল বা ম্যাঙ্কোজেব, প্রথম লক্ষণে লেবেল অনুসারে প্রয়োগ করুন।"
+    ],
+    "prevention_bn": [
+      "ফসল ঘুরান এবং ক্ষেতের পরিচ্ছন্নতা অনুশীলন করুন।",
+      "ওভারহেড সেচ এড়িয়ে চলুন।",
+      "বাতাস চলাচলের জন্য গাছপালা স্থাপন করুন এবং জায়গা দিন।"
+    ],
+    "expert_note_bn": "পরিচ্ছন্নতা এবং ঘূর্ণন প্রধান। ছত্রাকনাশকের লেবেল অনুসরণ করুন এবং আপনার স্থানীয় কৃষি অফিসারকে জিজ্ঞাসা করুন।"
+  },
+  "Tomato___Yellow_Leaf_Curl_Virus": {
+    "grounded": true,
+    "source": "groq",
+    "disease": "Yellow Leaf Curl Virus",
+    "crop": "Tomato",
+    "summary_en": "The Yellow Leaf Curl Virus affects Tomato crops, causing symptoms like leaf curling and yellowing, and can be managed through whitefly control and resistant varieties. Farmers should focus on prevention and control methods to minimize the disease's impact.",
+    "summary_bn": "হলুদ পাতা কার্ল ভাইরাস টমেটো ফসলকে প্রভাবিত করে, যার ফলে পাতা কার্লিং এবং হলুদ হয়, এবং সংক্রামিত মশা নিয়ন্ত্রণ ও প্রতিরোধী জাতের মাধ্যমে এটি পরিচালনা করা যায়। কৃষকদের উচিত প্রতিরোধ এবং নিয়ন্ত্রণ পদ্ধতিতে ফোকাস করা রোগের প্রভাব কমানোর জন্য।",
+    "symptoms_en": "Upward curling and cupping of leaves, yellow leaf edges, stunted bushy growth, and heavy flower/fruit drop.",
+    "symptoms_bn": "পাতার উপরের দিকে কার্লিং এবং কাপিং, পাতার প্রান্ত হলুদ, বাঁধাকপালা বৃদ্ধি এবং ফুল/ফল পড়ে যাওয়া।",
+    "organic_en": [
+      "Remove and destroy infected plants to cut the source.",
+      "Use yellow sticky traps and neem oil to reduce whiteflies.",
+      "Lay reflective/silver mulch to repel whiteflies.",
+      "Protect young plants with fine insect netting."
+    ],
+    "chemical_en": [
+      "There is no spray that cures the virus — manage the whitefly vector with an approved insecticide, rotating modes of action, per label."
+    ],
+    "prevention_en": [
+      "Plant TYLCV-resistant varieties where available.",
+      "Control whiteflies early and remove infected plants promptly.",
+      "Keep the field and borders free of weed hosts."
+    ],
+    "expert_note_en": "Because it's a virus, focus on whitefly control and resistant varieties, not on 'curing' the plant. Consult your local agriculture officer.",
+    "organic_bn": [
+      "সংক্রামিত গাছ অপসারণ ও ধ্বংস করুন যাতে সংক্রমণের উৎস কাটা যায়।",
+      "সাদা মশা কমানোর জন্য হলুদ স্টিকি ট্র্যাপ এবং নিম তেল ব্যবহার করুন।",
+      "সাদা মশা দূর করার জন্য প্রতিফলিত/রূপালী মালচ বিছিয়ে দিন।",
+      "ছোট গাছগুলোকে সূক্ষ্ম কীটপতঙ্গ জাল দিয়ে রক্ষা করুন।"
+    ],
+    "chemical_bn": [
+      "কোনো স্প্রে ভাইরাস নিরাময় করতে পারে না — অনুমোদিত কীটনাশক দিয়ে সাদা মশা ভেক্টর পরিচালনা করুন, লেবেল অনুযায়ী ক্রিয়াকলাপ পরিবর্তন করুন।"
+    ],
+    "prevention_bn": [
+      "যেখানে উপলব্ধ থাকে সেখানে TYLCV-প্রতিরোধী জাত লাগান।",
+      "প্রাথমিক অবস্থায় সাদা মশা নিয়ন্ত্রণ করুন এবং সংক্রামিত গাছ দ্রুত অপসারণ করুন।",
+      "ক্ষেত এবং সীমানা থেকে আগাছা মুক্ত রাখুন।"
+    ],
+    "expert_note_bn": "যেহেতু এটি একটি ভাইরাস, তাই গাছটি 'সারিয়ে' তোলার পরিবর্তে সাদা মশা নিয়ন্ত্রণ এবং প্রতিরোধী জাতের উপর ফোকাস করুন। আপনার স্থানীয় কৃষি অফিসারের সাথে পরামর্শ করুন।"
+  },
+  "Tomato___healthy": {
+    "grounded": true,
+    "source": "kb",
+    "disease": "Healthy",
+    "crop": "Tomato",
+    "summary_en": "Good news — the tomato leaf looks healthy. No disease detected.",
+    "summary_bn": "সুখবর — Tomato পাতাটি সুস্থ মনে হচ্ছে। কোনো রোগ ধরা পড়েনি।",
+    "symptoms_en": "No disease symptoms detected on the leaf.",
+    "organic_en": [
+      "Keep monitoring the field regularly."
+    ],
+    "chemical_en": [],
+    "prevention_en": [
+      "Maintain balanced watering and spacing.",
+      "Remove weeds and crop debris that harbour pests.",
+      "Scout the field weekly for early symptoms."
+    ],
+    "expert_note_en": "No action needed now. Re-check if you notice spots or wilting.",
+    "organic_bn": [
+      "নিয়মিত ক্ষেত পর্যবেক্ষণ করুন।"
+    ],
+    "chemical_bn": [],
+    "prevention_bn": [
+      "সুষম সেচ ও গাছের মধ্যে দূরত্ব বজায় রাখুন।",
+      "আগাছা ও ফসলের অবশিষ্ট অংশ পরিষ্কার রাখুন।",
+      "প্রতি সপ্তাহে ক্ষেত পরীক্ষা করুন।"
+    ],
+    "expert_note_bn": "এখন কিছু করার দরকার নেই। দাগ বা নেতিয়ে পড়া দেখলে আবার পরীক্ষা করুন।"
+  },
+  "__uncertain__": {
+    "grounded": true,
+    "source": "kb",
+    "disease": "Uncertain",
+    "crop": "Unknown",
+    "summary_en": "I'm not confident about this one. Please retake a clear, close photo of a single affected leaf in good light, or consult a local agriculture officer.",
+    "summary_bn": "এই ছবিটি নিয়ে আমি নিশ্চিত নই। ভালো আলোতে একটি আক্রান্ত পাতার স্পষ্ট, কাছের ছবি আবার তুলুন, অথবা স্থানীয় কৃষি কর্মকর্তার পরামর্শ নিন।",
+    "symptoms_en": "",
+    "organic_en": [],
+    "chemical_en": [],
+    "prevention_en": [],
+    "expert_note_en": "Low model confidence — no diagnosis is given to avoid a wrong recommendation.",
+    "organic_bn": [],
+    "chemical_bn": [],
+    "prevention_bn": [],
+    "expert_note_bn": "মডেলের আত্মবিশ্বাস কম — ভুল পরামর্শ এড়াতে কোনো রোগ নির্ণয় দেওয়া হয়নি।"
+  }
+}
