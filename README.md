@@ -9,12 +9,19 @@ chemical options, and prevention — in Bangla or English.
 
 ## Live demo
 
-- **App (try it):** https://4emonrahman2-leaflens.hf.space
-- **Backend API + docs:** https://4emonrahman2-leaflens-api.hf.space/docs
+**Try it now:** https://shadmansakibrahman.github.io/leaflens/
 
-> Heads up: the backend runs on a free Hugging Face Space that goes to sleep when idle.
-> The first request after a while can take up to a minute to wake up — the app shows a
-> "waking up" message while that happens.
+Upload or snap a leaf photo and it diagnoses it right in your browser — the AI model runs
+on your device.
+
+> **Two deployment modes ship in this repo:**
+> - **In-browser (GitHub Pages, the link above)** — the trained model is exported to ONNX
+>   and runs client-side with onnxruntime-web; the treatment advice is pre-translated to
+>   Bangla at build time. No server, loads fast, and stays reachable from Bangladesh (where
+>   `*.hf.space` is blocked on many ISPs — which is exactly why I moved the live demo here).
+> - **Full server (`backend/`)** — a complete FastAPI REST API + SQLite database that serves
+>   the model and does live Groq Bangla translation. Run it locally (see below) or deploy the
+>   Docker image. This is the "real backend" with APIs, validation, and error handling.
 
 ## Screenshots
 
