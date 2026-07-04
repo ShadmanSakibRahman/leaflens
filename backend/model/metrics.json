@@ -1,0 +1,135 @@
+{
+  "test_accuracy": 0.9591,
+  "best_val_accuracy": 0.9674,
+  "num_classes": 20,
+  "num_images_total": 9622,
+  "train_size": 6736,
+  "val_size": 1443,
+  "test_size": 1443,
+  "epochs": 40,
+  "backbone": "mobilenet_v2 (ImageNet, frozen) + linear head (linear probe)",
+  "per_class": {
+    "Corn___Common_rust": {
+      "precision": 1.0,
+      "recall": 0.9867,
+      "f1": 0.9933,
+      "support": 75
+    },
+    "Corn___Northern_Leaf_Blight": {
+      "precision": 0.9868,
+      "recall": 1.0,
+      "f1": 0.9934,
+      "support": 75
+    },
+    "Corn___healthy": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 75
+    },
+    "Pepper___Bacterial_spot": {
+      "precision": 0.9733,
+      "recall": 0.9733,
+      "f1": 0.9733,
+      "support": 75
+    },
+    "Pepper___healthy": {
+      "precision": 0.961,
+      "recall": 0.9867,
+      "f1": 0.9737,
+      "support": 75
+    },
+    "Potato___Early_blight": {
+      "precision": 0.9733,
+      "recall": 0.9733,
+      "f1": 0.9733,
+      "support": 75
+    },
+    "Potato___Late_blight": {
+      "precision": 0.9351,
+      "recall": 0.96,
+      "f1": 0.9474,
+      "support": 75
+    },
+    "Potato___healthy": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 18
+    },
+    "Rice___Bacterial_leaf_blight": {
+      "precision": 1.0,
+      "recall": 0.9867,
+      "f1": 0.9933,
+      "support": 75
+    },
+    "Rice___Blast": {
+      "precision": 0.9861,
+      "recall": 0.9467,
+      "f1": 0.966,
+      "support": 75
+    },
+    "Rice___Brown_spot": {
+      "precision": 0.9494,
+      "recall": 1.0,
+      "f1": 0.974,
+      "support": 75
+    },
+    "Rice___Tungro": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 75
+    },
+    "Rice___healthy": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 75
+    },
+    "Tomato___Bacterial_spot": {
+      "precision": 0.9467,
+      "recall": 0.9467,
+      "f1": 0.9467,
+      "support": 75
+    },
+    "Tomato___Early_blight": {
+      "precision": 0.9194,
+      "recall": 0.76,
+      "f1": 0.8321,
+      "support": 75
+    },
+    "Tomato___Late_blight": {
+      "precision": 0.8375,
+      "recall": 0.8933,
+      "f1": 0.8645,
+      "support": 75
+    },
+    "Tomato___Leaf_Mold": {
+      "precision": 0.9189,
+      "recall": 0.9067,
+      "f1": 0.9128,
+      "support": 75
+    },
+    "Tomato___Septoria_leaf_spot": {
+      "precision": 0.8718,
+      "recall": 0.9067,
+      "f1": 0.8889,
+      "support": 75
+    },
+    "Tomato___Yellow_Leaf_Curl_Virus": {
+      "precision": 0.974,
+      "recall": 1.0,
+      "f1": 0.9868,
+      "support": 75
+    },
+    "Tomato___healthy": {
+      "precision": 0.9867,
+      "recall": 0.9867,
+      "f1": 0.9867,
+      "support": 75
+    }
+  },
+  "macro_f1": 0.9603,
+  "weighted_f1": 0.9587
+}

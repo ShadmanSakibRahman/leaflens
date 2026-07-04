@@ -65,7 +65,7 @@ def load_model():
 
     net = models.mobilenet_v2(weights=None)
     net.classifier[1] = torch.nn.Linear(net.last_channel, len(_labels))
-    state = torch.load(WEIGHTS_PATH, map_location="cpu")
+    state = torch.load(WEIGHTS_PATH, map_location="cpu", weights_only=True)
     net.load_state_dict(state)
     net.eval()
     _model = net
