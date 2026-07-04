@@ -53,12 +53,14 @@ The system uses **two AI components that work together**:
 
 ## Technology stack
 
-- **Frontend:** Next.js (React), deployed on **Vercel**. Mobile-first, camera/upload,
-  Bangla⇄English toggle, scan history.
-- **Backend:** **FastAPI** (Python), deployed as a Docker container on **Hugging Face
-  Spaces**. REST endpoints for prediction, advice, diagnosis and history; input validation
-  and graceful error handling.
-- **Database:** SQLite for scan history.
+- **Frontend:** Next.js (React), mobile-first, camera/upload, Bangla⇄English toggle, scan
+  history. The live demo is deployed on **GitHub Pages** as an on-device app (the model is
+  exported to ONNX and runs in the browser via onnxruntime-web), which keeps it reachable
+  from Bangladesh.
+- **Backend:** **FastAPI** (Python), containerised with Docker. REST endpoints for
+  prediction, advice, diagnosis and history; input validation and graceful error handling.
+  Runs locally and deploys to any Docker host.
+- **Database:** SQLite for scan history (browser localStorage in the on-device build).
 - **AI/ML:** PyTorch + torchvision (MobileNetV2), scikit-learn for evaluation, Groq API for
   the advisory language layer.
 - **Tooling:** Git/GitHub, Hugging Face `datasets` for data, Colab for GPU training.

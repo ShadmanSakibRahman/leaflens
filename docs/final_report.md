@@ -38,13 +38,13 @@ tested on its own:
 - **AI** — two models working together: a vision model that names the disease, and a
   retrieval-plus-LLM layer that turns the diagnosis into safe, grounded advice.
 
-The frontend is deployed on Vercel and the backend on Hugging Face Spaces; the farmer only
-ever sees one URL.
+The live demo is deployed as an on-device app on GitHub Pages (see section 5 for why), and
+the full FastAPI backend also lives in the repo and runs the same models server-side.
 
 ```
-React app (Vercel)  --HTTPS-->  FastAPI (Hugging Face Spaces)
-  camera + advice               vision model + knowledge base + Groq
-                                SQLite history
+Live demo (GitHub Pages)          Full server (backend/, runnable + Dockerised)
+  React UI + ONNX model    OR      React app --HTTPS--> FastAPI
+  runs in the browser              vision model + knowledge base + Groq + SQLite
 ```
 
 ## 3. The AI workflow in detail
@@ -127,9 +127,14 @@ A few things I figured out the hard way:
   the knowledge-base keys don't match exactly, the advice lookup silently fails. I solved it
   by mapping every source label into my own canonical names when preparing the data, so
   everything is aligned by construction.
-- **Free-tier cold starts.** A sleeping Hugging Face Space takes a while to wake. The app now
-  pings `/health` on load and shows a friendly "waking up" message so the first request never
-  looks broken.
+- **The host was blocked in Bangladesh.** I first deployed to Hugging Face Spaces, and it
+  ran fine — but `*.hf.space` turned out to be blocked on my ISP (every Space, even famous
+  ones, returned the same error, while the Hugging Face API still worked). Since my grader is
+  likely on a Bangladeshi network too, a blocked demo would be useless. So I pivoted: I
+  exported the model to **ONNX**, pre-translated all the advice to Bangla at build time, and
+  rebuilt the app to run **entirely in the browser** on **GitHub Pages** (which is reachable
+  from Bangladesh). The constraint actually made the product better — it now works with no
+  server and no per-request cost. The full FastAPI backend still lives in the repo.
 - **Keeping the LLM grounded.** My first prompt let the model "improve" the advice and it
   started adding dosages that weren't in my facts. Tightening the instruction to *translate
   only* fixed it.
